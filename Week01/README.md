@@ -171,11 +171,15 @@ pwd
 ```bash
 cd data
 cd raw
-#### go back to README.md
+```
+
+go back to README.md
+
+```bash
 cd ../..
 ```
 
-##accessing files using absolute paths
+## accessing files using absolute paths
 
 ### move up directories
 
