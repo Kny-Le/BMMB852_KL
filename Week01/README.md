@@ -80,7 +80,7 @@ $ find . -type f
 cd ~/assignment1
 ```
    
-### These are relative since they start from my current directory; assignment 1
+### These are relative since they start from my current directory
 
 ```bash
 cat data/raw/input.txt
@@ -100,7 +100,7 @@ cd data
 cd raw
 ```
 
-#### go back to README.md
+#### go back a couple files
 
 ```bash
 cd ../..
@@ -122,80 +122,6 @@ cat /Users/kenny/BMMB852/assignment1/README.md/scripts/analyze.sh
 ```
 
 Check location
-
-```bash
-pwd
-```
-cd ~/assignment1
-mkdir -p data/raw results scripts
-touch data/raw/input.txt
-touch results/output.txt
-touch scriptsanalyze.sh
-```
-
-### create files with content
-
-```bash
-echo "input data" > data/raw/input.txt
-echo "results" > results/output.txt
-echo '#!bin/bash' > scripts/analyze.sh
-```
-
-### verify
-
-```bash
-find . -type f
-```
-
-## accessing these files using relative paths
-
-```bash
-cd ~/assignment1
-```
-
-### these are relative since they start from my current directory; assignment 1
-
-```bash
-cat data/raw/input.txt
-cat results/output.txt
-cat scripts/analyze.sh
-```
-
-###confirm where you are
-
-```bash
-pwd
-```
-###move between directories using relative paths (data for example)
-
-```bash
-cd data
-cd raw
-```
-
-go back to README.md
-
-```bash
-cd ../..
-```
-
-## accessing files using absolute paths
-
-### move up directories
-
-```bash
-cd ../../../..
-```
-
-### absolute path
-
-```bash
-cat /Users/kenny/BMMB852/assignment1/README.md/data/raw/input.txt
-cat /Users/kenny/BMMB852/assignment1/README.md/results/output.txt
-cat /Users/kenny/BMMB852/assignment1/README.md/scripts/analyze.sh
-```
-
-### check location
 
 ```bash
 pwd
