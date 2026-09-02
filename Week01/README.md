@@ -182,9 +182,10 @@ cd ../..
 ```bash
 cd ../../../..
 ```
+
 ### absolute path
 
-'''bash
+```bash
 cat /Users/kenny/BMMB852/assignment1/README.md/data/raw/input.txt
 cat /Users/kenny/BMMB852/assignment1/README.md/results/output.txt
 cat /Users/kenny/BMMB852/assignment1/README.md/scripts/analyze.sh
