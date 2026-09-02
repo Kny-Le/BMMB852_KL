@@ -1,21 +1,25 @@
-[README.md](https://github.com/user-attachments/files/31747533/README.md)
 # BMMB852 Assignment 1
 
+I used VSC
+
 ## Samtools versions
+
+### Commands
 
 ```bash
 conda activate bioinfo
 samtools --version
 ```
+#### Output:
 
 kenny@MacBook-Pro ~/BMMB852/assignment1/README.md
 $ samtools --version
 samtools 1.24
 Using htslib 1.24
 
-## nested directory
+## Nested Directory
 
-### check where you are
+Check where you are
 
 ```bash
 ls
@@ -26,7 +30,7 @@ ls
 ```bash
 mkdir BMMB852
 ```
-### directory in a directory (nested)
+### Directory in a directory (nested)
 
 ```bash
 cd BMMB852
@@ -37,7 +41,6 @@ cd README.md
 ```
 
 ## making files in different directories
-
 ### commands to create empty files
 
 ```bash
@@ -47,8 +50,8 @@ touch data/raw/input.txt
 touch results/output.txt
 touch scriptsanalyze.sh
 ```
-
-### create files with content
+   
+### Commands to create files with content
 
 ```bash
 echo "input data" > data/raw/input.txt
@@ -56,19 +59,28 @@ echo "results" > results/output.txt
 echo '#!bin/bash' > scripts/analyze.sh
 ```
 
-### verify
+### Verify files
 
 ```bash
 find . -type f
 ```
 
-## accessing these files using relative paths
+Output:
+kenny@MacBook-Pro ~/BMMB852/assignment1/README.md
+$ find . -type f
+./README.md
+./results/output.txt
+./scripts/analyze.sh
+./README.txt
+
+
+## Accessing these files using relative paths
 
 ```bash
 cd ~/assignment1
 ```
-
-### these are relative since they start from my current directory; assignment 1
+   
+### These are relative since they start from my current directory; assignment 1
 
 ```bash
 cat data/raw/input.txt
@@ -76,36 +88,40 @@ cat results/output.txt
 cat scripts/analyze.sh
 ```
 
-###confirm where you are
+Confirm where you are
 
 ```bash
 pwd
 ```
-###move between directories using relative paths (data for example)
+Move between directories using relative paths (data for example)
 
 ```bash
 cd data
 cd raw
+```
+
 #### go back to README.md
+
+```bash
 cd ../..
 ```
 
-##accessing files using absolute paths
+## Accessing files using absolute paths
 
-### move up directories
-
+Move up directories
+   
 ```bash
 cd ../../../..
 ```
-### absolute path
+### Absolute path
 
-'''bash
+```bash
 cat /Users/kenny/BMMB852/assignment1/README.md/data/raw/input.txt
 cat /Users/kenny/BMMB852/assignment1/README.md/results/output.txt
 cat /Users/kenny/BMMB852/assignment1/README.md/scripts/analyze.sh
 ```
 
-### check location
+Check location
 
 ```bash
 pwd
