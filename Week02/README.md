@@ -189,16 +189,27 @@ busco \
 ```
 
 Output:
+
     ---------------------------------------------------
+    
     |Results from dataset bacteria_odb10               |
+    
     ---------------------------------------------------
+    
     |C:84.7%[S:84.7%,D:0.0%],F:4.8%,M:10.5%,n:124      |
+    
     |105    Complete BUSCOs (C)                        |
+    
     |105    Complete and single-copy BUSCOs (S)        |
+    
     |0    Complete and duplicated BUSCOs (D)           |
+    
     |6    Fragmented BUSCOs (F)                        |
+    
     |13    Missing BUSCOs (M)                          |
+    
     |124    Total BUSCO groups searched                |
+    
     ---------------------------------------------------
 
 This means:
@@ -217,13 +228,17 @@ The genes are fairly packed together with a range of around 50-150bp distance be
 
 Forward:
 R N * G S T L K L L S T S N G * G V I M L V K G N E I L L K A H
+
 G T K E A R * N C Y Q Q V M D E V L S C * L K A M K S Y * K P I
+
 E L R K H A K I V I N K * W M R C Y H V S * R Q * N L I E S P *
 
 Reverse:
 
 P V L S A R * F Q * * C T I S S T N D H * N F A I F D * Q F G M
+
 F * P L V S F N N D V L L P H P T I M N T L P L S I K N F A W
+
 S S L F C A L I T L L Y H I L H * * T L * L C H F R I S L G Y
 
 ### Identify the type of feature displayed as a data track.
