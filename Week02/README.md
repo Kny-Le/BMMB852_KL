@@ -1,6 +1,7 @@
 # Assignment 2
         
 ## Genome used:
+
 https://www.ncbi.nlm.nih.gov/nuccore/NZ_CADHBV000000000.1
 
 This is Helicobacter Pylori
@@ -52,7 +53,7 @@ clean:
     rm -rf fasta gff $(ARCHIVE)
 ```
 
-from same folder as the Makefile, run:
+From same folder as the Makefile, run:
 
 ```bash
 make all
@@ -145,9 +146,12 @@ END {
 ```
 
 Output:
+
+```bash
 Contigs: 49
 Total bp: 1657706
 Total Mb: 1.65771
+```
 
 The genome of Helicobacter pylori is roughly 1657706 bp, 1657.706 Kb, or 1.657706 Mb.
 This bacterium has a singluar circular chromosome that is separated into 49 different contigs.
@@ -225,10 +229,15 @@ Output:
     ---------------------------------------------------
 
 This means:
+
 105 complete genes: 84.7%
+
 105 complete single copy genes: 84.7%
+
 0 duplicate genes: 0%
+
 6 fragmented genes: 4.8%
+
 13 missing genes: 10.5%
 
 ### How tightly packed are the genes in this genome? Estimate the gene-to-gene distance via the browser.
@@ -236,7 +245,13 @@ This means:
 The genes are fairly packed together with a range of around 50-150bp distance between genes
 
 ### Pick a coordinate on the chromosome and visually inspect the sequence regions around it.
+
 #### Describe all six reading frames (codons) that the coordinate could be part of.
+
+<img width="3450" height="2038" alt="image" src="https://github.com/user-attachments/assets/1b961a10-9632-4494-a1af-f2eb5b1ac593" />
+
+<img width="3450" height="2038" alt="image" src="https://github.com/user-attachments/assets/8f8d4ecd-2618-42eb-8a39-b5f9b73fd198" />
+
 
 Forward:
 R N * G S T L K L L S T S N G * G V I M L V K G N E I L L K A H
@@ -257,4 +272,7 @@ S S L F C A L I T L L Y H I L H * * T L * L C H F R I S L G Y
 
 My  gff.gz file is displayed as the annotated data from the track and my fna.fai file is the reference
 
-###
+### Color features by their strand orientation
+
+<img width="1712" height="286" alt="image" src="https://github.com/user-attachments/assets/bd21b832-cee2-4d13-a687-1eb58b3da28c" />
+
