@@ -2,26 +2,36 @@
         
 ## genome used:
 https://www.ncbi.nlm.nih.gov/nuccore/NZ_CADHBV000000000.1
+
 This is Helicobacter Pylori
-    
+
+## Make a Makefile
+
+Open working folder
+
+```bash
+touch Makefile
+```
+
 ## Make a FASTA and GIFF (paste into makefile):
     
 ```bash
 ASSEMBLY := GCF_902846105.1
 ARCHIVE := $(ASSEMBLY).zip
-    
+
 FASTA := fasta/$(ASSEMBLY).fna
 GFF := gff/$(ASSEMBLY).gff
-        
-DATASETS_URL := https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/$(ASSEMBLY)/download?include_annotation_type=$
+
+DATASETS_URL := https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/$(ASSEMBLY)/download?include_annotation_type=GENOME_GFF,GENOME_FASTA
 
 .PHONY: all fasta gff clean
-    
+
 all: fasta gff
-    
+
 fasta: $(FASTA)
 
 gff: $(GFF)
+
 $(ARCHIVE):
     curl --fail --location --silent --show-error \
         --output $@ '$(DATASETS_URL)'
@@ -37,19 +47,21 @@ $(GFF): $(ARCHIVE)
     unzip -p $< 'ncbi_dataset/data/$(ASSEMBLY)/genomic.gff' > $@.tmp
     test -s $@.tmp
     mv $@.tmp $@
-        
+
 clean:
     rm -rf fasta gff $(ARCHIVE)
 ```
 
-### Run:
-    
+from same folder as the Makefile, run:
+
 ```bash
-make
+make all
 ```
     
 Output:
+
 fasta/GCF_902846105.1.fna
+
 gff/GCF_902846105.1.gff
         
 ## rename folders
