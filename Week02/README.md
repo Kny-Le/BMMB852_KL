@@ -248,9 +248,11 @@ The genes are fairly packed together with a range of around 50-150bp distance be
 
 #### Describe all six reading frames (codons) that the coordinate could be part of.
 
-<img width="3450" height="2038" alt="image" src="https://github.com/user-attachments/assets/1b961a10-9632-4494-a1af-f2eb5b1ac593" />
+<img width="1705" height="269" alt="image" src="https://github.com/user-attachments/assets/d1b3138e-c16e-4c4d-964d-476e1f3f7123" />
 
-<img width="3450" height="2038" alt="image" src="https://github.com/user-attachments/assets/8f8d4ecd-2618-42eb-8a39-b5f9b73fd198" />
+
+<img width="1710" height="277" alt="image" src="https://github.com/user-attachments/assets/dcc78cd9-6e60-494c-b50b-51a91a031eb6" />
+
 
 
 Forward:
