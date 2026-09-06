@@ -248,6 +248,10 @@ The genes are fairly packed together with a range of around 50-150bp distance be
 
 #### Describe all six reading frames (codons) that the coordinate could be part of.
 
+Coordinates:
+
+NZ_CADHBV010000001.1:153,146-153,240
+
 <img width="1705" height="269" alt="image" src="https://github.com/user-attachments/assets/d1b3138e-c16e-4c4d-964d-476e1f3f7123" />
 
 
@@ -256,6 +260,7 @@ The genes are fairly packed together with a range of around 50-150bp distance be
 
 
 Forward:
+
 R N * G S T L K L L S T S N G * G V I M L V K G N E I L L K A H
 
 G T K E A R * N C Y Q Q V M D E V L S C * L K A M K S Y * K P I
