@@ -4,7 +4,8 @@
 
 https://www.ncbi.nlm.nih.gov/nuccore/NZ_CADHBV000000000.1
 
-This is Helicobacter Pylori
+This is Helicobacter Pylori. This is a pathogenic bacterium that causes stomach ulcers. It is able to survive in the 
+stomach's acidic environment by secreting ammonia to neutralize the area around itself.
 
 ## Make a Makefile
 
@@ -258,7 +259,6 @@ NZ_CADHBV010000001.1:153,146-153,240
 <img width="1710" height="277" alt="image" src="https://github.com/user-attachments/assets/dcc78cd9-6e60-494c-b50b-51a91a031eb6" />
 
 
-
 Forward:
 
 R N * G S T L K L L S T S N G * G V I M L V K G N E I L L K A H
@@ -280,6 +280,8 @@ S S L F C A L I T L L Y H I L H * * T L * L C H F R I S L G Y
 My  gff.gz file is displayed as the annotated data from the track and my fna.fai file is the reference
 
 ### Color features by their strand orientation
+
+I color coded the introns orange in the forward direction
 
 <img width="1712" height="286" alt="image" src="https://github.com/user-attachments/assets/bd21b832-cee2-4d13-a687-1eb58b3da28c" />
 
