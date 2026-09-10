@@ -1,6 +1,6 @@
 # Assignment 3
 
-Hairuo's assignment 2 submission is in this directory under "week02"
+Hairuo's assignment 2 submission is in this directory under "week02" for your convenience.
 
 ## Fork the code:
 
@@ -10,7 +10,7 @@ I am reviewing Hairuo Wang's Week 2 assignment where he visualized the reference
 git clone https://github.com/Kny-Le/appbio-KL.git
 ```
 
-After forking, to check the reproducibility of the make file I removed the existing .FASTA and .gff files
+After forking, to check the reproducibility of the make file I removed the existing FASTA and gff files
 
 ```bash
 rm -f data/fasta/GCF_000002945.2_ASM294v3_genomic.fna
@@ -46,7 +46,7 @@ mv "data/gff/GCF_000002945.2_ASM294v3_genomic.gff.tmp" "data/gff/GCF_000002945.2
 
 ### How large is the genome?
 
-Ran code from his "week02" file:
+Ran code from their "week02" file:
 
 ```bash
 seqkit stats data/fasta/GCF_000002945.2_ASM294v3_genomic.fna
@@ -61,7 +61,7 @@ data/fasta/GCF_000002945.2_ASM294v3_genomic.fna  FASTA   DNA          4  12,591,
 ```
 ### How many chromosomes does it have?
 
-Ran code from his "week02" file:
+Ran code from their "week02" file:
 
 ```bash
 grep -c '^>.*chromosome:' data/fasta/GCF_000002945.2_ASM294v3_genomic.fna
@@ -75,8 +75,8 @@ Output (pasted from my terminal):
 
 ## Questions from Assignment 3
 
-The code is extremely reproducible. I after cloning Hairuo's makefile from his Github, I was able to acheive the same
-outputs from his commands as he was. My AI agent (Visual Studio Code) said that his solution is better than mine, only because his has more validation steps than mine does and is cleaner. Although I have a sneaking suspicion it is just saying that since I have already loaded in Hairuo's code it has a preference his code instead. Other than that, there is not much I would change, but I would update the file names to be the organisms' names instead of just the accession number. The .gff file is also not indexed, so I attached some code to get it indexed and applied it to the pull request (all suggestions made are put below).
+The code is extremely reproducible. I after cloning Hairuo's makefile from their Github, I was able to achieve the same
+outputs from their commands. My AI agent (Visual Studio Code) said that their solution is better than mine, only because their has more validation steps than mine does and is cleaner. Although I have a sneaking suspicion it is just saying that since I have already loaded in Hairuo's code it has a preference their code instead. Other than that, there is not much I would change, but I would update the file names to be the organisms' names instead of just the accession number. The .gff file is also not indexed, so I attached some code to get it indexed and applied it to the pull request (all suggestions made are put below).
 
 ### Suggestions to code:
 
