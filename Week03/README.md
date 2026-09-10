@@ -7,8 +7,9 @@ Hairuo's assignment 2 submission is in this directory under "week02"
 I am reviewing Hairuo Wang's Week 2 assignment where he visualized the reference genome for Schizosaccharomyces pombe.
 
 ```bash
-git clone https://github.com/hairuow622/appbio.git .
+git clone https://github.com/Kny-Le/appbio-KL.git
 ```
+
 After forking, to check the reproducibility of the make file I removed the existing .FASTA and .gff files
 
 ```bash
