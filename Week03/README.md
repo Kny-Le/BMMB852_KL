@@ -76,15 +76,11 @@ Output (pasted from my terminal):
 ## Questions from Assignment 3
 
 The code is extremely reproducible. I after cloning Hairuo's makefile from his Github, I was able to acheive the same
-outputs from his commands as he was. My AI agent said that his solution is better than mine, only because his has more
-validation steps than mine does and is cleaner. Although I have a sneaking suspicion it is just saying that since I
-have already loaded in Mr. Hairuo's code it has a preference his code instead. There is not much I would change, but I 
-would update the file names to be the organisms' names instead of just the accession number. The .gff files are also
-not indexed.
+outputs from his commands as he was. My AI agent (Visual Studio Code) said that his solution is better than mine, only because his has more validation steps than mine does and is cleaner. Although I have a sneaking suspicion it is just saying that since I have already loaded in Hairuo's code it has a preference his code instead. Other than that, there is not much I would change, but I would update the file names to be the organisms' names instead of just the accession number. The .gff file is also not indexed, so I attached some code to get it indexed and applied it to the pull request (all suggestions made are put below).
 
-### Change file names:
+### Suggestions to code:
 
-Command:
+### Command to change file names to include organism name for better readability:
 
 ```bash
 mv data/fasta/GCF_000002945.2_ASM294v3_genomic.fna data/fasta/SPombe_genomic.fna
@@ -106,9 +102,9 @@ SPombe_genomic.gff
 (bioinfo) 
 ```
 
-### Index files:
+#### Index Files:
 
-Command:
+Command to index .gff (.gff to gff.gz):
 
 ```bash
 bgzip -c data/gff/SPombe_genomic.gff > data/gff/SPombe_genomic.gff.gz
@@ -123,7 +119,7 @@ SPombe_genomic.gff    SPombe_genomic.gff.gz
 (bioinfo) 
 ```
 
-### Pull request link
+#### Pull request link
 
 Copy link:
 
