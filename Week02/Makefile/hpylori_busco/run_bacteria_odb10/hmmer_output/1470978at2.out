@@ -1,0 +1,14 @@
+#                                                                                          --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                      accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#              ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+NZ_CADHBV010000010.1:43032-43526|+ -            165 1470978at2           -            119   2.7e-20   69.1   1.2   1   1   1.3e-21   2.1e-18   63.0   1.2     8   108    25   149    12   164 0.83 NZ_CADHBV010000010.1_45 # 43032 # 43526 # 1 # ID=10_45;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.410
+#
+# Program:         hmmsearch
+# Version:         3.4 (Aug 2023)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/kenny/BMMB852/Week02/Makefile/busco_downloads/lineages/bacteria_odb10/hmms/1470978at2.hmm
+# Target file:     /Users/kenny/BMMB852/Week02/Makefile/hpylori_busco/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /Users/kenny/BMMB852/Week02/Makefile/hpylori_busco/run_bacteria_odb10/hmmer_output/1470978at2.out --cpu 1 /Users/kenny/BMMB852/Week02/Makefile/busco_downloads/lineages/bacteria_odb10/hmms/1470978at2.hmm /Users/kenny/BMMB852/Week02/Makefile/hpylori_busco/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /Users/kenny/BMMB852/Week02/Makefile
+# Date:            Thu Sep  3 14:18:39 2026
+# [ok]

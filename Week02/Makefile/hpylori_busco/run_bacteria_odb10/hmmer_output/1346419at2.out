@@ -1,0 +1,16 @@
+#                                                                                          --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                      accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#              ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+NZ_CADHBV010000004.1:48152-49429|- -            426 1346419at2           -            308   5.5e-57  189.7   6.1   1   2     1e-57   7.9e-55  182.6   1.5     1   207    16   253    16   268 0.87 NZ_CADHBV010000004.1_48 # 48152 # 49429 # -1 # ID=4_48;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.401
+NZ_CADHBV010000004.1:48152-49429|- -            426 1346419at2           -            308   5.5e-57  189.7   6.1   2   2    0.0001     0.079    8.5   0.2   223   276   294   363   275   381 0.76 NZ_CADHBV010000004.1_48 # 48152 # 49429 # -1 # ID=4_48;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.401
+NZ_CADHBV010000003.1:64606-65169|+ -            188 1346419at2           -            308   3.6e-05   19.5   0.1   1   1   6.1e-08   4.8e-05   19.1   0.1    73   111    81   122     1   147 0.75 NZ_CADHBV010000003.1_56 # 64606 # 65169 # 1 # ID=3_56;partial=00;start_type=ATG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.445
+#
+# Program:         hmmsearch
+# Version:         3.4 (Aug 2023)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/kenny/BMMB852/Week02/Makefile/busco_downloads/lineages/bacteria_odb10/hmms/1346419at2.hmm
+# Target file:     /Users/kenny/BMMB852/Week02/Makefile/hpylori_busco/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /Users/kenny/BMMB852/Week02/Makefile/hpylori_busco/run_bacteria_odb10/hmmer_output/1346419at2.out --cpu 1 /Users/kenny/BMMB852/Week02/Makefile/busco_downloads/lineages/bacteria_odb10/hmms/1346419at2.hmm /Users/kenny/BMMB852/Week02/Makefile/hpylori_busco/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /Users/kenny/BMMB852/Week02/Makefile
+# Date:            Thu Sep  3 14:18:39 2026
+# [ok]

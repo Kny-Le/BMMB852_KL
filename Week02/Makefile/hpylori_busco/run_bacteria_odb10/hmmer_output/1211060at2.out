@@ -1,0 +1,17 @@
+#                                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+NZ_CADHBV010000008.1:13205-13831|+   -            209 1211060at2           -            164   2.3e-54  180.1   7.4   1   2   4.8e-53   2.5e-50  167.0   2.3     1   142     1   164     1   175 0.84 NZ_CADHBV010000008.1_26 # 13205 # 13831 # 1 # ID=8_26;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.434
+NZ_CADHBV010000008.1:13205-13831|+   -            209 1211060at2           -            164   2.3e-54  180.1   7.4   2   2     9e-06    0.0047   13.2   0.2   138   164   179   208   170   208 0.85 NZ_CADHBV010000008.1_26 # 13205 # 13831 # 1 # ID=8_26;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.434
+NZ_CADHBV010000001.1:381629-382336|- -            236 1211060at2           -            164   3.6e-07   26.6   0.0   1   1   1.1e-09   5.9e-07   25.9   0.0    78   126     1    50     1    55 0.93 NZ_CADHBV010000001.1_352 # 381629 # 382336 # -1 # ID=1_352;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.357
+NZ_CADHBV010000018.1:14352-14606|-   -             85 1211060at2           -            164   5.4e-06   22.8   0.0   1   1   1.1e-08   5.9e-06   22.7   0.0    78   148     1    71     1    77 0.86 NZ_CADHBV010000018.1_17 # 14352 # 14606 # -1 # ID=18_17;partial=00;start_type=ATG;rbs_motif=3Base/5BMM;rbs_spacer=13-15bp;gc_cont=0.400
+#
+# Program:         hmmsearch
+# Version:         3.4 (Aug 2023)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/kenny/BMMB852/Week02/Makefile/busco_downloads/lineages/bacteria_odb10/hmms/1211060at2.hmm
+# Target file:     /Users/kenny/BMMB852/Week02/Makefile/hpylori_busco/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /Users/kenny/BMMB852/Week02/Makefile/hpylori_busco/run_bacteria_odb10/hmmer_output/1211060at2.out --cpu 1 /Users/kenny/BMMB852/Week02/Makefile/busco_downloads/lineages/bacteria_odb10/hmms/1211060at2.hmm /Users/kenny/BMMB852/Week02/Makefile/hpylori_busco/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /Users/kenny/BMMB852/Week02/Makefile
+# Date:            Thu Sep  3 14:18:39 2026
+# [ok]

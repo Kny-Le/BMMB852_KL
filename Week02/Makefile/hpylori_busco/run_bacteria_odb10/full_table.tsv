@@ -1,0 +1,127 @@
+# BUSCO version is: 6.1.0 
+# The lineage dataset is: bacteria_odb10 (Creation date: 2024-01-08, number of genomes: 4085, number of BUSCOs: 124)
+# Busco id	Status	Sequence	Gene Start	Gene End	Strand	Score	Length	OrthoDB url	Description
+4421at2	Complete	NZ_CADHBV010000010.1	44170	52842	+	1616.7	1174	https://v10-1.orthodb.org/?query=4421at2	DNA-directed RNA polymerase subunit beta'
+9601at2	Missing
+26038at2	Missing
+91428at2	Complete	NZ_CADHBV010000010.1	1322	3865	+	520.2	545	https://v10-1.orthodb.org/?query=91428at2	Alanine--tRNA ligase
+95696at2	Missing
+143460at2	Complete	NZ_CADHBV010000021.1	11087	9288	-	517.7	439	https://v10-1.orthodb.org/?query=143460at2	GTP-binding protein
+182107at2	Missing
+219876at2	Missing
+223233at2	Complete	NZ_CADHBV010000001.1	92125	94335	+	435.1	452	https://v10-1.orthodb.org/?query=223233at2	DNA topoisomerase, type IA
+226836at2	Complete	NZ_CADHBV010000022.1	4485	2752	-	579.5	473	https://v10-1.orthodb.org/?query=226836at2	Aminoacyl-tRNA synthetase, class II
+232152at2	Complete	NZ_CADHBV010000001.1	234641	235876	+	311.0	279	https://v10-1.orthodb.org/?query=232152at2	adenylosuccinate synthase
+267682at2	Missing
+353391at2	Complete	NZ_CADHBV010000003.1	58107	59354	+	363.4	301	https://v10-1.orthodb.org/?query=353391at2	Serine--tRNA ligase
+384865at2	Fragmented	NZ_CADHBV010000003.1	22705	21518	-	120.4	156	https://v10-1.orthodb.org/?query=384865at2	Transcription termination/antitermination protein NusA
+402899at2	Complete	NZ_CADHBV010000002.1	127372	126164	-	277.1	281	https://v10-1.orthodb.org/?query=402899at2	Tyrosine--tRNA ligase
+430176at2	Complete	NZ_CADHBV010000017.1	15216	13816	-	556.3	361	https://v10-1.orthodb.org/?query=430176at2	ATPase, F1/V1/A1 complex, alpha/beta subunit, N-terminal domain
+462069at2	Complete	NZ_CADHBV010000007.1	55038	56246	+	144.3	196	https://v10-1.orthodb.org/?query=462069at2	Phosphoglycerate kinase
+469058at2	Complete	NZ_CADHBV010000011.1	25704	26690	+	344.1	295	https://v10-1.orthodb.org/?query=469058at2	Phenylalanine--tRNA ligase alpha subunit
+504464at2	Complete	NZ_CADHBV010000011.1	20187	18661	-	274.9	230	https://v10-1.orthodb.org/?query=504464at2	GMP synthase
+505485at2	Complete	NZ_CADHBV010000001.1	200943	202289	+	180.1	228	https://v10-1.orthodb.org/?query=505485at2	Ribosomal protein S5 domain 2-type fold
+533698at2	Complete	NZ_CADHBV010000001.1	134822	136102	+	342.5	282	https://v10-1.orthodb.org/?query=533698at2	Enolase
+662686at2	Complete	NZ_CADHBV010000008.1	13843	14877	+	146.9	217	https://v10-1.orthodb.org/?query=662686at2	DNA-directed RNA polymerase subunit alpha
+665824at2	Complete	NZ_CADHBV010000001.1	219278	217545	-	621.1	533	https://v10-1.orthodb.org/?query=665824at2	Proline--tRNA ligase
+761140at2	Complete	NZ_CADHBV010000011.1	13386	11434	-	136.2	255	https://v10-1.orthodb.org/?query=761140at2	Methionine--tRNA ligase
+776861at2	Complete	NZ_CADHBV010000011.1	29005	30294	+	99.1	377	https://v10-1.orthodb.org/?query=776861at2	Cytidylate kinase
+837522at2	Complete	NZ_CADHBV010000017.1	17680	16169	-	655.3	407	https://v10-1.orthodb.org/?query=837522at2	ATP synthase subunit alpha
+841869at2	Complete	NZ_CADHBV010000018.1	9048	8269	-	71.1	191	https://v10-1.orthodb.org/?query=841869at2	UDP-N-acetylenolpyruvoylglucosamine reductase
+874197at2	Complete	NZ_CADHBV010000001.1	404433	403423	-	370.1	272	https://v10-1.orthodb.org/?query=874197at2	Holliday junction ATP-dependent DNA helicase RuvB
+923547at2	Missing
+932854at2	Complete	NZ_CADHBV010000010.1	24542	25816	+	386.6	416	https://v10-1.orthodb.org/?query=932854at2	Phosphoribosylamine--glycine ligase
+932993at2	Complete	NZ_CADHBV010000004.1	89107	90462	+	37.1	184	https://v10-1.orthodb.org/?query=932993at2	Trigger factor
+961486at2	Complete	NZ_CADHBV010000008.1	3295	4125	+	199.7	187	https://v10-1.orthodb.org/?query=961486at2	Ribosomal protein L2
+981870at2	Complete	NZ_CADHBV010000002.1	12904	14001	+	249.9	266	https://v10-1.orthodb.org/?query=981870at2	Chorismate synthase
+984717at2	Complete	NZ_CADHBV010000006.1	9113	10018	+	150.8	222	https://v10-1.orthodb.org/?query=984717at2	GTPase Era
+1009041at2	Complete	NZ_CADHBV010000009.1	53726	54883	+	185.4	223	https://v10-1.orthodb.org/?query=1009041at2	Cell division protein FtsZ
+1024388at2	Complete	NZ_CADHBV010000001.1	174057	175214	+	417.9	307	https://v10-1.orthodb.org/?query=1024388at2	S-adenosylmethionine synthetase
+1036075at2	Missing
+1043239at2	Complete	NZ_CADHBV010000002.1	130697	129975	-	142.9	146	https://v10-1.orthodb.org/?query=1043239at2	Uridylate kinase
+1049662at2	Missing
+1054741at2	Complete	NZ_CADHBV010000007.1	64172	65218	+	322.8	326	https://v10-1.orthodb.org/?query=1054741at2	tRNA-specific 2-thiouridylase
+1069591at2	Fragmented	NZ_CADHBV010000018.1	4517	5350	+	61.0	135	https://v10-1.orthodb.org/?query=1069591at2	tRNA dimethylallyltransferase
+1074831at2	Complete	NZ_CADHBV010000015.1	18947	17373	-	59.1	382	https://v10-1.orthodb.org/?query=1074831at2	DNA repair protein RecN
+1080436at2	Complete	NZ_CADHBV010000001.1	133767	134810	+	369.5	264	https://v10-1.orthodb.org/?query=1080436at2	Protein RecA
+1093223at2	Complete	NZ_CADHBV010000019.1	14411	13143	-	186.9	318	https://v10-1.orthodb.org/?query=1093223at2	Mur ligase, C-terminal
+1132353at2	Complete	NZ_CADHBV010000008.1	4799	5503	+	190.3	161	https://v10-1.orthodb.org/?query=1132353at2	K Homology domain
+1151822at2	Complete	NZ_CADHBV010000019.1	15495	14413	-	228.7	247	https://v10-1.orthodb.org/?query=1151822at2	Phospho-N-acetylmuramoyl-pentapeptide-transferase
+1166299at2	Missing
+1211060at2	Complete	NZ_CADHBV010000008.1	13205	13831	+	180.1	164	https://v10-1.orthodb.org/?query=1211060at2	RNA-binding S4 domain
+1257362at2	Complete	NZ_CADHBV010000005.1	37279	36257	-	161.1	234	https://v10-1.orthodb.org/?query=1257362at2	tRNA N6-adenosine threonylcarbamoyltransferase
+1266295at2	Complete	NZ_CADHBV010000001.1	171435	172139	+	187.6	244	https://v10-1.orthodb.org/?query=1266295at2	Triosephosphate isomerase
+1270636at2	Complete	NZ_CADHBV010000008.1	1736	2311	+	99.5	156	https://v10-1.orthodb.org/?query=1270636at2	Ribosomal protein L3
+1272633at2	Complete	NZ_CADHBV010000002.1	61558	62484	+	125.4	152	https://v10-1.orthodb.org/?query=1272633at2	S-adenosyl-L-methionine-dependent methyltransferase
+1346419at2	Complete	NZ_CADHBV010000004.1	49429	48152	-	189.7	261	https://v10-1.orthodb.org/?query=1346419at2	Flavoprotein
+1395197at2	Complete	NZ_CADHBV010000001.1	236962	238005	+	99.2	149	https://v10-1.orthodb.org/?query=1395197at2	Peptidase M50
+1398618at2	Complete	NZ_CADHBV010000008.1	8153	8689	+	126.4	130	https://v10-1.orthodb.org/?query=1398618at2	Ribosomal protein L6, alpha-beta domain
+1419877at2	Complete	NZ_CADHBV010000009.1	32317	31379	-	192.3	262	https://v10-1.orthodb.org/?query=1419877at2	glycerol-3-phosphate dehydrogenase
+1456375at2	Complete	NZ_CADHBV010000008.1	6997	7542	+	181.4	137	https://v10-1.orthodb.org/?query=1456375at2	Ribosomal protein L5
+1470978at2	Complete	NZ_CADHBV010000010.1	43032	43526	+	69.1	101	https://v10-1.orthodb.org/?query=1470978at2	Ribosomal protein L10
+1490892at2	Complete	NZ_CADHBV010000013.1	5357	6037	+	18.2	50	https://v10-1.orthodb.org/?query=1490892at2	16S rRNA (uracil(1498)-N(3))-methyltransferase
+1491686at2	Missing
+1497415at2	Complete	NZ_CADHBV010000012.1	44250	44795	+	24.3	63	https://v10-1.orthodb.org/?query=1497415at2	Ribosome maturation factor RimM
+1502854at2	Complete	NZ_CADHBV010000001.1	304196	303576	-	221.2	179	https://v10-1.orthodb.org/?query=1502854at2	Guanylate kinase
+1504821at2	Complete	NZ_CADHBV010000001.1	381663	380821	-	119.5	222	https://v10-1.orthodb.org/?query=1504821at2	Riboflavin kinase
+1505038at2	Complete	NZ_CADHBV010000008.1	9074	9517	+	193.4	131	https://v10-1.orthodb.org/?query=1505038at2	Ribosomal protein S5
+1540940at2	Complete	NZ_CADHBV010000010.1	53353	53820	+	193.8	133	https://v10-1.orthodb.org/?query=1540940at2	Ribosomal protein S7 domain
+1567535at2	Complete	NZ_CADHBV010000008.1	9978	11240	+	274.6	295	https://v10-1.orthodb.org/?query=1567535at2	Protein translocase subunit SecY
+1572673at2	Complete	NZ_CADHBV010000008.1	2346	2993	+	96.4	78	https://v10-1.orthodb.org/?query=1572673at2	50S ribosomal protein L4
+1574817at2	Complete	NZ_CADHBV010000005.1	30861	31277	+	117.2	143	https://v10-1.orthodb.org/?query=1574817at2	Transcription antitermination protein NusB
+1590629at2	Complete	NZ_CADHBV010000001.1	401096	400560	-	44.3	73	https://v10-1.orthodb.org/?query=1590629at2	rRNA small subunit methyltransferase G
+1592033at2	Fragmented	NZ_CADHBV010000004.1	55927	54542	-	90.0	191	https://v10-1.orthodb.org/?query=1592033at2	GTPase HflX
+1595498at2	Complete	NZ_CADHBV010000001.1	415558	415998	+	36.0	71	https://v10-1.orthodb.org/?query=1595498at2	Ribosome maturation factor RimP
+1623045at2	Complete	NZ_CADHBV010000005.1	63950	63156	-	245.1	188	https://v10-1.orthodb.org/?query=1623045at2	Ribosomal protein S2
+1661836at2	Complete	NZ_CADHBV010000009.1	532	1113	+	87.9	147	https://v10-1.orthodb.org/?query=1661836at2	Recombination protein RecR
+1666043at2	Complete	NZ_CADHBV010000008.1	4427	4795	+	81.1	86	https://v10-1.orthodb.org/?query=1666043at2	Ribosomal protein L22/L17
+1671455at2	Complete	NZ_CADHBV010000010.1	42217	42921	+	219.7	166	https://v10-1.orthodb.org/?query=1671455at2	Ribosomal protein L1
+1674344at2	Complete	NZ_CADHBV010000008.1	49697	49140	-	123.8	136	https://v10-1.orthodb.org/?query=1674344at2	Ribosome recycling factor
+1676462at2	Complete	NZ_CADHBV010000003.1	43509	42949	-	121.7	109	https://v10-1.orthodb.org/?query=1676462at2	Peptidyl-tRNA hydrolase
+1692188at2	Complete	NZ_CADHBV010000008.1	7747	8142	+	145.7	129	https://v10-1.orthodb.org/?query=1692188at2	Ribosomal protein S8
+1698718at2	Complete	NZ_CADHBV010000012.1	45507	45863	+	103.5	88	https://v10-1.orthodb.org/?query=1698718at2	Ribosomal protein L19
+1701531at2	Complete	NZ_CADHBV010000017.1	16154	15249	-	149.3	145	https://v10-1.orthodb.org/?query=1701531at2	ATP synthase, F1 complex, gamma subunit
+1702697at2	Complete	NZ_CADHBV010000010.1	41747	42172	+	123.9	105	https://v10-1.orthodb.org/?query=1702697at2	Ribosomal protein L11, C-terminal
+1707228at2	Complete	NZ_CADHBV010000010.1	52930	53337	+	172.5	101	https://v10-1.orthodb.org/?query=1707228at2	Ribosomal protein S12, bacterial-type
+1713391at2	Complete	NZ_CADHBV010000008.1	12800	13195	+	135.9	97	https://v10-1.orthodb.org/?query=1713391at2	Ribosomal protein S11
+1720952at2	Complete	NZ_CADHBV010000003.1	98092	97634	-	152.8	137	https://v10-1.orthodb.org/?query=1720952at2	SsrA-binding protein
+1758685at2	Missing
+1760144at2	Complete	NZ_CADHBV010000001.1	107876	108487	+	68.8	90	https://v10-1.orthodb.org/?query=1760144at2	Translation initiation factor 3, C-terminal
+1766414at2	Complete	NZ_CADHBV010000001.1	55071	54682	-	97.1	99	https://v10-1.orthodb.org/?query=1766414at2	Ribosomal protein S9
+1772647at2	Complete	NZ_CADHBV010000008.1	12415	12777	+	133.8	97	https://v10-1.orthodb.org/?query=1772647at2	Ribosomal protein S13
+1776954at2	Complete	NZ_CADHBV010000008.1	59525	59953	+	41.7	70	https://v10-1.orthodb.org/?query=1776954at2	Ribosomal protein S6
+1786618at2	Complete	NZ_CADHBV010000008.1	5506	5931	+	141.7	102	https://v10-1.orthodb.org/?query=1786618at2	Ribosomal protein L16
+1799923at2	Complete	NZ_CADHBV010000008.1	6395	6763	+	124.5	104	https://v10-1.orthodb.org/?query=1799923at2	Ribosomal protein L14P
+1822215at2	Fragmented	NZ_CADHBV010000001.1	55493	55068	-	126.9	108	https://v10-1.orthodb.org/?query=1822215at2	Ribosomal protein L13
+1822695at2	Complete	NZ_CADHBV010000010.1	43571	43948	+	84.5	84	https://v10-1.orthodb.org/?query=1822695at2	Ribosomal protein L7/L12
+1827295at2	Complete	NZ_CADHBV010000002.1	70919	70518	-	45.3	66	https://v10-1.orthodb.org/?query=1827295at2	tRNA threonylcarbamoyl adenosine modification protein TsaE
+1827334at2	Complete	NZ_CADHBV010000004.1	76990	77592	+	63.7	83	https://v10-1.orthodb.org/?query=1827334at2	methyltransferase
+1830156at2	Complete	NZ_CADHBV010000012.1	30016	30438	+	65.7	70	https://v10-1.orthodb.org/?query=1830156at2	Endoribonuclease YbeY
+1838961at2	Complete	NZ_CADHBV010000008.1	14877	15227	+	80.5	83	https://v10-1.orthodb.org/?query=1838961at2	Ribosomal protein L17
+1842956at2	Complete	NZ_CADHBV010000017.1	21627	20977	-	30.1	75	https://v10-1.orthodb.org/?query=1842956at2	Biotin--acetyl-CoA-carboxylase ligase
+1844275at2	Complete	NZ_CADHBV010000001.1	382918	383841	+	136.5	180	https://v10-1.orthodb.org/?query=1844275at2	Aspartate carbamoyltransferase
+1846503at2	Complete	NZ_CADHBV010000003.1	65169	65642	+	112.1	107	https://v10-1.orthodb.org/?query=1846503at2	pantetheine-phosphate adenylyltransferase
+1874945at2	Fragmented	NZ_CADHBV010000008.1	9537	9938	+	57.1	54	https://v10-1.orthodb.org/?query=1874945at2	Ribosomal protein L15
+1890943at2	Complete	NZ_CADHBV010000002.1	12206	12907	+	65.2	105	https://v10-1.orthodb.org/?query=1890943at2	ribonuclease III
+1893906at2	Complete	NZ_CADHBV010000008.1	4136	4417	+	120.6	72	https://v10-1.orthodb.org/?query=1893906at2	Ribosomal protein S19, bacterial-type
+1904463at2	Complete	NZ_CADHBV010000001.1	285449	285715	+	119.7	67	https://v10-1.orthodb.org/?query=1904463at2	Ribosomal protein L27
+1906715at2	Fragmented	NZ_CADHBV010000001.1	86288	85713	-	48.7	55	https://v10-1.orthodb.org/?query=1906715at2	Protein GrpE
+1932144at2	Complete	NZ_CADHBV010000001.1	108757	109107	+	108.1	93	https://v10-1.orthodb.org/?query=1932144at2	Ribosomal protein L20
+1937072at2	Complete	NZ_CADHBV010000012.1	43644	43874	+	96.2	69	https://v10-1.orthodb.org/?query=1937072at2	Ribosomal protein S16
+1937493at2	Missing
+1940575at2	Complete	NZ_CADHBV010000008.1	60531	60788	+	73.0	48	https://v10-1.orthodb.org/?query=1940575at2	Ribosomal protein S18
+1949059at2	Complete	NZ_CADHBV010000001.1	285120	285434	+	105.0	99	https://v10-1.orthodb.org/?query=1949059at2	Ribosomal protein L21
+1959318at2	Complete	NZ_CADHBV010000006.1	6787	7236	+	68.0	83	https://v10-1.orthodb.org/?query=1959318at2	Ribosomal protein L9
+1963491at2	Complete	NZ_CADHBV010000008.1	8703	9059	+	90.0	102	https://v10-1.orthodb.org/?query=1963491at2	Ribosomal protein L18
+1971380at2	Complete	NZ_CADHBV010000001.1	415230	415565	+	53.5	111	https://v10-1.orthodb.org/?query=1971380at2	Ribosome-binding factor A
+1978865at2	Complete	NZ_CADHBV010000008.1	2997	3278	+	51.0	83	https://v10-1.orthodb.org/?query=1978865at2	Ribosomal protein L25/L23
+1990141at2	Complete	NZ_CADHBV010000001.1	424620	424892	+	90.1	65	https://v10-1.orthodb.org/?query=1990141at2	Ribosomal protein S15
+1990650at2	Complete	NZ_CADHBV010000018.1	4105	4446	+	42.5	77	https://v10-1.orthodb.org/?query=1990650at2	Ribosomal silencing factor RsfS
+2005443at2	Complete	NZ_CADHBV010000001.1	46463	46732	+	55.6	64	https://v10-1.orthodb.org/?query=2005443at2	Ribosomal protein S20
+2012682at2	Complete	NZ_CADHBV010000008.1	1385	1699	+	117.3	87	https://v10-1.orthodb.org/?query=2012682at2	Ribosomal protein S10
+2035880at2	Complete	NZ_CADHBV010000008.1	6132	6392	+	52.8	57	https://v10-1.orthodb.org/?query=2035880at2	Ribosomal protein S17/S11
+2040741at2	Complete	NZ_CADHBV010000008.1	6763	6984	+	37.4	43	https://v10-1.orthodb.org/?query=2040741at2	Ribosomal protein L24
+2046660at2	Complete	NZ_CADHBV010000001.1	108468	108662	+	35.6	31	https://v10-1.orthodb.org/?query=2046660at2	Ribosomal protein L35
+2063644at2	Complete	NZ_CADHBV010000008.1	5918	6118	+	21.7	38	https://v10-1.orthodb.org/?query=2063644at2	Ribosomal protein L29/L35
+2066663at2	Complete	NZ_CADHBV010000008.1	12001	12219	+	75.1	55	https://v10-1.orthodb.org/?query=2066663at2	Translation initiation factor IF-1
+2075502at2	Complete	NZ_CADHBV010000001.1	314713	315117	+	21.6	48	https://v10-1.orthodb.org/?query=2075502at2	YqgF/RNase H-like domain

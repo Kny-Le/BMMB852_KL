@@ -1,0 +1,15 @@
+#                                                                                          --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                      accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#              ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+NZ_CADHBV010000003.1:42949-43509|- -            187 1676462at2           -            123   1.7e-36  121.7   0.1   1   2   2.6e-11     4e-08   30.0   0.0     1    32     3    34     3    44 0.89 NZ_CADHBV010000003.1_35 # 42949 # 43509 # -1 # ID=3_35;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.373
+NZ_CADHBV010000003.1:42949-43509|- -            187 1676462at2           -            123   1.7e-36  121.7   0.1   2   2   7.6e-30   1.2e-26   89.9   0.1    29   109    49   139    42   152 0.85 NZ_CADHBV010000003.1_35 # 42949 # 43509 # -1 # ID=3_35;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.373
+#
+# Program:         hmmsearch
+# Version:         3.4 (Aug 2023)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/kenny/BMMB852/Week02/Makefile/busco_downloads/lineages/bacteria_odb10/hmms/1676462at2.hmm
+# Target file:     /Users/kenny/BMMB852/Week02/Makefile/hpylori_busco/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /Users/kenny/BMMB852/Week02/Makefile/hpylori_busco/run_bacteria_odb10/hmmer_output/1676462at2.out --cpu 1 /Users/kenny/BMMB852/Week02/Makefile/busco_downloads/lineages/bacteria_odb10/hmms/1676462at2.hmm /Users/kenny/BMMB852/Week02/Makefile/hpylori_busco/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /Users/kenny/BMMB852/Week02/Makefile
+# Date:            Thu Sep  3 14:18:40 2026
+# [ok]

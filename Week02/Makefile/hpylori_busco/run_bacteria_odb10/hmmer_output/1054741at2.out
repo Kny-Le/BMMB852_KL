@@ -1,0 +1,21 @@
+#                                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+NZ_CADHBV010000007.1:64172-65218|+   -            349 1054741at2           -            333   1.8e-97  322.8   0.3   1   1  8.1e-100   2.1e-97  322.6   0.3     3   328     6   347     4   348 0.90 NZ_CADHBV010000007.1_59 # 64172 # 65218 # 1 # ID=7_59;partial=00;start_type=TTG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.395
+NZ_CADHBV010000005.1:18851-19903|-   -            351 1054741at2           -            333     5e-11   38.6   0.0   1   1     3e-13   7.7e-11   38.0   0.0     3   123     3   114     1   120 0.86 NZ_CADHBV010000005.1_16 # 18851 # 19903 # -1 # ID=5_16;partial=00;start_type=ATG;rbs_motif=AGGAG(G)/GGAGG;rbs_spacer=13-15bp;gc_cont=0.414
+NZ_CADHBV010000011.1:18661-20187|-   -            509 1054741at2           -            333   1.6e-06   23.8   0.0   1   1   1.2e-08     3e-06   22.9   0.0     3    77   209   277   207   282 0.80 NZ_CADHBV010000011.1_15 # 18661 # 20187 # -1 # ID=11_15;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.419
+NZ_CADHBV010000001.1:310815-311606|- -            264 1054741at2           -            333   6.5e-06   21.8   0.0   1   2   1.2e-06   0.00032   16.3   0.0     4    70    26    86    24   101 0.79 NZ_CADHBV010000001.1_290 # 310815 # 311606 # -1 # ID=1_290;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.380
+NZ_CADHBV010000001.1:310815-311606|- -            264 1054741at2           -            333   6.5e-06   21.8   0.0   2   2      0.01       2.7    3.3   0.0   153   194   149   192   143   200 0.78 NZ_CADHBV010000001.1_290 # 310815 # 311606 # -1 # ID=1_290;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.380
+NZ_CADHBV010000016.1:11529-12215|+   -            229 1054741at2           -            333    0.0012   14.4   0.0   1   1   5.9e-06    0.0016   14.0   0.0     4    70     4    63     1   196 0.79 NZ_CADHBV010000016.1_14 # 11529 # 12215 # 1 # ID=16_14;partial=00;start_type=ATG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.400
+NZ_CADHBV010000002.1:81892-82908|-   -            339 1054741at2           -            333    0.0086   11.6   0.0   1   2   0.00061      0.16    7.4   0.0     6    63    18    70    14   101 0.67 NZ_CADHBV010000002.1_70 # 81892 # 82908 # -1 # ID=2_70;partial=00;start_type=TTG;rbs_motif=None;rbs_spacer=None;gc_cont=0.368
+NZ_CADHBV010000002.1:81892-82908|-   -            339 1054741at2           -            333    0.0086   11.6   0.0   2   2     0.025       6.5    2.1   0.0   228   267   221   260   140   299 0.65 NZ_CADHBV010000002.1_70 # 81892 # 82908 # -1 # ID=2_70;partial=00;start_type=TTG;rbs_motif=None;rbs_spacer=None;gc_cont=0.368
+#
+# Program:         hmmsearch
+# Version:         3.4 (Aug 2023)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/kenny/BMMB852/Week02/Makefile/busco_downloads/lineages/bacteria_odb10/hmms/1054741at2.hmm
+# Target file:     /Users/kenny/BMMB852/Week02/Makefile/hpylori_busco/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /Users/kenny/BMMB852/Week02/Makefile/hpylori_busco/run_bacteria_odb10/hmmer_output/1054741at2.out --cpu 1 /Users/kenny/BMMB852/Week02/Makefile/busco_downloads/lineages/bacteria_odb10/hmms/1054741at2.hmm /Users/kenny/BMMB852/Week02/Makefile/hpylori_busco/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /Users/kenny/BMMB852/Week02/Makefile
+# Date:            Thu Sep  3 14:18:38 2026
+# [ok]
