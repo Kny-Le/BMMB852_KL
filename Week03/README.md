@@ -1,5 +1,7 @@
 # Assignment 3
 
+Hairuo's assignment 2 submission is in this directory under "week02"
+
 ## Fork the code:
 
 I am reviewing Hairuo Wang's Week 2 assignment where he visualized the reference genome for Schizosaccharomyces pombe.
@@ -39,7 +41,7 @@ mv "data/gff/GCF_000002945.2_ASM294v3_genomic.gff.tmp" "data/gff/GCF_000002945.2
 (bioinfo) 
 ```
 
-## Check reproducibility of the downstream code from the files created by Mr. Wang's Makefile
+## Check reproducibility of the downstream code from the files created by Hairuo's Makefile
 
 ### How large is the genome?
 
@@ -72,10 +74,10 @@ Output (pasted from my terminal):
 
 ## Questions from Assignment 3
 
-The code is extremely reproducible. I after cloning Mr. Wang's makefile from his Github, I was able to acheive the same
+The code is extremely reproducible. I after cloning Hairuo's makefile from his Github, I was able to acheive the same
 outputs from his commands as he was. My AI agent said that his solution is better than mine, only because his has more
 validation steps than mine does and is cleaner. Although I have a sneaking suspicion it is just saying that since I
-have already loaded in Mr. Wang's code it has a preference his code instead. There is not much I would change, but I 
+have already loaded in Mr. Hairuo's code it has a preference his code instead. There is not much I would change, but I 
 would update the file names to be the organisms' names instead of just the accession number. The .gff files are also
 not indexed.
 
