@@ -75,8 +75,7 @@ Output (pasted from my terminal):
 
 ## Questions from Assignment 3
 
-The code is extremely reproducible. I after cloning Hairuo's makefile from their Github, I was able to achieve the same
-outputs from their commands. My AI agent (Visual Studio Code) said that their solution is better than mine, only because their has more validation steps than mine does and is cleaner. Although I have a sneaking suspicion it is just saying that since I have already loaded in Hairuo's code it has a preference their code instead. Other than that, there is not much I would change, but I would update the file names to be the organisms' names instead of just the accession number. The .gff file is also not indexed, so I attached some code to get it indexed and applied it to the pull request (all suggestions made are put below).
+The code is extremely reproducible. I after cloning Hairuo's forked file from their Github, I was able to achieve the same outputs from their commands. My AI agent (Visual Studio Code) said that their solution is better than mine, because theirs has more validation steps and is cleaner than mine. Although, I have a sneaking suspicion it says that since I have already loaded in Hairuo's code it has a preference for their code. That being said, there is not much I would change, except I would update the file names to be the organism's name instead of just the accession number. The .gff file is also not indexed, so I attached some code to get it indexed and applied it to the pull request (all suggestions made are put below).
 
 ### Suggestions to code:
 
