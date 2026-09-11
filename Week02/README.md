@@ -15,7 +15,7 @@ Open working folder
 touch Makefile
 ```
 
-## Make a FASTA and GIFF (paste into makefile):
+## Make a FASTA and GFF (paste into makefile):
     
 ```bash
 ASSEMBLY := GCF_902846105.1
