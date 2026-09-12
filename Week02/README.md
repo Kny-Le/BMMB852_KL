@@ -17,7 +17,7 @@ touch Makefile
 
 ## Download FASTA and GFF Files
 
-Use the following Makefile code to download FASTA and GFF files, unzip, rename and make indices.
+Use the following Makefile to download FASTA and GFF files, unzip, rename and make indices.
     
 ```bash
 # =========================================================
