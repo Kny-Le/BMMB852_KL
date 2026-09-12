@@ -103,7 +103,9 @@ clean:
 Output:
 
 ```bash
+fasta/HPylori_NZ_CADHBV000000000.1.fna
 fasta/HPylori_NZ_CADHBV000000000.1.fna.fai
+gff/HPylori_NZ_CADHBV000000000.1.gff  
 gff/HPylori_NZ_CADHBV000000000.1.gff.gz
 gff/HPylori_NZ_CADHBV000000000.1.gff.gz.tbi
 ```
