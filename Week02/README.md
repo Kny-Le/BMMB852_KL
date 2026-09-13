@@ -155,7 +155,7 @@ Total Mb: 1.65771
 ```
 
 The genome of Helicobacter pylori is roughly 1657706 bp, 1657.706 Kb, or 1.657706 Mb.
-This bacterium has a singluar circular chromosome that is separated into 49 different contigs.
+After: This assembly is a draft genome in 49 contigs rather than a single closed sequence. H. pylori has one circular chromosome in nature, but this build has not been assembled into a single contig-consistent with the BUSCO result (10.5% missing).
 
 ### How many annotations are in the annotation file?
 
