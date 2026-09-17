@@ -1,9 +1,0 @@
-.DS_Store
-
-# Downloaded and generated sequencing data
-data/sra/
-data/fastq/*.fastq
-data/fastq/*.fastq.gz
-data/fastq/.*.done
-data/qc/*.fastq.gz
-data/qc/.*.done
