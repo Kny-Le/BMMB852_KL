@@ -234,7 +234,7 @@ Images:
 
 ![alt text](<screenshots/Screenshot 2026-09-17 at 2.23.13 PM.png>)
 
-![alt text](<screenshots/Screenshot 2026-09-17 at 2.23.13 PM-1.png>)
+<img width="1287" height="648" alt="Screenshot 2026-09-17 at 2 23 45 PM" src="https://github.com/user-attachments/assets/80d0c35e-e319-4196-8d5e-fc920efddc3a" />
 
 ![alt text](<screenshots/Screenshot 2026-09-17 at 2.24.32 PM.png>)
 
