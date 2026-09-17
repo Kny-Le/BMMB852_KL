@@ -143,17 +143,17 @@ open fastq/SRR40271341_1_fastqc.html
 
 #### Output:
 
-![alt text](<Screenshot 2026-09-16 at 6.43.00 PM.png>)
+![alt text](<screenshots/Screenshot 2026-09-16 at 6.43.00 PM.png>)
 
-![alt text](<Screenshot 2026-09-16 at 6.45.51 PM.png>)
+![alt text](<screenshots/Screenshot 2026-09-16 at 6.45.51 PM.png>)
 
-![alt text](<Screenshot 2026-09-16 at 6.46.37 PM.png>)
+![alt text](<screenshots/Screenshot 2026-09-16 at 6.46.37 PM.png>)
 
-![alt text](<Screenshot 2026-09-16 at 6.47.20 PM.png>)
+![alt text](<screenshots/Screenshot 2026-09-16 at 6.47.20 PM.png>)
 
-![alt text](<Screenshot 2026-09-16 at 6.48.44 PM.png>)
+![alt text](<screenshots/Screenshot 2026-09-16 at 6.48.44 PM.png>)
 
-![alt text](<Screenshot 2026-09-16 at 6.49.15 PM.png>)
+![alt text](<screenshots/Screenshot 2026-09-16 at 6.49.15 PM.png>)
 
 ### Using fastp
 
@@ -230,13 +230,13 @@ open data/qc/SRR40271341.html
 
 Images:
 
-![alt text](<Screenshot 2026-09-17 at 2.22.19 PM.png>)
+![alt text](<screenshots/Screenshot 2026-09-17 at 2.22.19 PM.png>)
 
-![alt text](<Screenshot 2026-09-17 at 2.23.13 PM.png>)
+![alt text](<screenshots/Screenshot 2026-09-17 at 2.23.13 PM.png>)
 
-![alt text](<Screenshot 2026-09-17 at 2.23.13 PM-1.png>)
+![alt text](<screenshots/Screenshot 2026-09-17 at 2.23.13 PM-1.png>)
 
-![alt text](<Screenshot 2026-09-17 at 2.24.32 PM.png>)
+![alt text](<screenshots/Screenshot 2026-09-17 at 2.24.32 PM.png>)
 
 Alternatively you can run FastQC on the downloaded reads
 
@@ -247,17 +247,17 @@ open data/fastq/SRR40271341_1_fastqc.html
 
 Images:
 
-![alt text](<Screenshot 2026-09-17 at 2.25.16 PM.png>)
+![alt text](<screenshots/Screenshot 2026-09-17 at 2.25.16 PM.png>)
 
-![alt text](<Screenshot 2026-09-17 at 2.26.10 PM.png>)
+![alt text](<screenshots/Screenshot 2026-09-17 at 2.26.10 PM.png>)
 
-![alt text](<Screenshot 2026-09-17 at 2.27.04 PM.png>)
+![alt text](<screenshots/Screenshot 2026-09-17 at 2.27.04 PM.png>)
 
-![alt text](<Screenshot 2026-09-17 at 2.27.47 PM.png>)
+![alt text](<screenshots/Screenshot 2026-09-17 at 2.27.47 PM.png>)
 
-![alt text](<Screenshot 2026-09-17 at 2.28.26 PM.png>)
+![alt text](<screenshots/Screenshot 2026-09-17 at 2.28.26 PM.png>)
 
-![alt text](<Screenshot 2026-09-17 at 2.29.21 PM.png>)
+![alt text](<screenshots/Screenshot 2026-09-17 at 2.29.21 PM.png>)
 
 ### Questions
 
