@@ -228,11 +228,11 @@ Mean depth over covered bases: 133.248x
 
 Coordinates (on contig 1): NZ_CADHBV010000001.1:241,995-242,247
 
-![alt text](<Screenshot 2026-09-23 at 12.57.52 PM.png>)
+![IGV alignment view](<screenshots/Screenshot 2026-09-23 at 12.57.52 PM.png>)
 
-![alt text](<Screenshot 2026-09-23 at 1.06.06 PM.png>)
+![IGV alignment detail](<screenshots/Screenshot 2026-09-23 at 1.06.06 PM.png>)
 
-![alt text](<Screenshot 2026-09-23 at 1.06.49 PM.png>)
+![IGV coverage view](<screenshots/Screenshot 2026-09-23 at 1.06.49 PM.png>)
 
 ## Summary
 
