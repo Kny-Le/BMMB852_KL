@@ -145,7 +145,7 @@ SRR40271341_1.fastq    SRR40271341_1.fastq.gz SRR40271341_2.fastq    SRR40271341
 Open Statistics Report
 
 ```bash
-open bam/
+open bam/HPylori.KAZ-017.flagstat.txt
 ```
 
 Output from my statistics report (flagstat.txt) file
