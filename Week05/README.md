@@ -4,7 +4,7 @@
 
 https://www.ncbi.nlm.nih.gov/sra/SRX35013314[accn]
 
-This is Helicobacter pylori. This is a pathogenic bacterium that causes stomach ulcers. It is able to survive in the stom$ acidic environment by secreting ammonia to neutralize the area around itself.
+This is Helicobacter pylori. This is a pathogenic bacterium that causes stomach ulcers. It is able to survive in the stomach acidic environment by secreting ammonia to neutralize the area around itself.
 
 PRJNA1515477
 
@@ -118,8 +118,6 @@ make
 Confirm
 
 ```
-kenny@MacBook-Pro ~/BMMB852/Week05/bam
-$ ls
 kenny@MacBook-Pro ~/BMMB852/Week05/bam
 $ ls
 HPylori.KAZ-017.flagstat.txt   HPylori.KAZ-017.sorted.bam     HPylori.KAZ-017.sorted.bam.bai
