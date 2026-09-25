@@ -273,5 +273,5 @@ Coordinates (on contig 1): NZ_CADHBV010000001.1:241,995-242,247
 
 ## Summary
 
-Overall, the alignments looks generally strong, with ~ 96% of the primary reads aligning to the H. pylory reference genome and ~94% of the reads being properly paired with over a 120x covereage. However, despite the coverage being high across most major contigs, it is very uneven across the entire assembly since there are several small contigs that have low or no coverage.
+Overall, the alignments looks strong, with ~ 96% of the primary reads aligning to the H. pylori reference genome and ~94% of the reads being properly paired with over 120x covereage. However, despite the coverage being high across most major contigs, it is very uneven across the entire assembly since there are several small contigs that have low or no coverage.
 In IGV, the colored regions represent areas that are different from the reference genome, with there being some consistent varations repeated across multiple reads, reflecting true genetic variation. However there are some isolated colored bases found only on a few bases, suggesting some sequencing errors or alignment artifacts.
