@@ -22,7 +22,7 @@ This sample's sequence has insertions at positions 1,521 (GTG), 14,948 (T), and 
 
 ![alt text](<../screenshots/Screenshot 2026-10-03 at 5.54.01 PM.png>)
 
-Sample 3's genome sequence appears to have higher expression across various reads between ~1 - 6kb (regions in green). This could be due to the fact that there is a significant amount of coverage in these areas compared to the rest of the sequence, resulting in more of the higher expressed sequences being read. This genome also runs into the same problem as in Sample 2, that is that it has plenty of SNPs across the entire sequence, and would have to be redone. The elevation in coverage and many missmatches would need to have a normalized depth analysis to be conclusive.
+Sample 3's genome sequence appears to have higher expression across various reads between ~1 - 6kb (regions in green). This could be due to the fact that there is a significant amount of coverage in these areas compared to the rest of the sequence, resulting in more of the higher expressed sequences being read. This genome also runs into the same problem as in Sample 2, that is that it has plenty of SNPs across the entire sequence, and would have to be redone. The elevation in coverage and many missmatches would need to have a normalized depth analysis to be conclusive. If this is an over expression analysis, I believe this experiment could be find if that is what the researchers wanted to show.
 
 ## Sample 4
 
@@ -30,7 +30,7 @@ Sample 3's genome sequence appears to have higher expression across various read
 
 ![alt text](<../screenshots/Screenshot 2026-10-03 at 6.21.55 PM.png>)
 
-This genome appears to have a lot of ____ between the ranges of ~4.25 - 6.25kb. The coverage of this sample is also quite fair across its genome. Sample 4 also has its fair share of SNPs across different reads with no correlation between reads, but to a lesser degree than in Samples 2 and 3. None the less, I would still want to redo this sequencing.
+This genome appears to have a lot of RNAi's between the ranges of ~4.25 - 6.25kb. The coverage of this sample is also quite fair across its genome. Sample 4 also has its fair share of SNPs across different reads with no correlation between reads, but to a lesser degree than in Samples 2 and 3. None the less, depending on the experimental goal, this could be sufficient for the researchers that sent this off for sequencing.
 
 
 ## Sample 5
@@ -40,4 +40,4 @@ This genome appears to have a lot of ____ between the ranges of ~4.25 - 6.25kb. 
 ![alt text](<../screenshots/Screenshot 2026-10-03 at 6.12.50 PM.png>)
 
 
-Sample 5's sequence is interesting since there appears to be a combination of reads with increased copy number and expression in red and green, respectively across 4.25 - 6.75 kb. Despite this, there is a relatively even coverage compared to samples 2 and 3. Additionally, there are still SNPs sprinkled across the genome, however, similar to Sample 4, the degree of SNPs here are not as intense as in Samples 2 and 3.
+Sample 5's sequence is interesting since there appears to be a combination of reads with increased copy number and expression in red and green, respectively across ~4.25 - 6.75 kb. Notably, the increased copy number regions are flanked by the increased expression regions. Despite this, there is a relatively even coverage compared to samples 2 and 3. Additionally, there are still SNPs sprinkled across the genome, however, similar to Sample 4, the degree of SNPs here are not as intense as in Samples 2 and 3. Linke Sample 4, depending on the aim of the experiment, this may be sufficient for the scientists.
