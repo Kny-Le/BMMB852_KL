@@ -35,7 +35,7 @@ This genome appears to have a lot of ____ between the ranges of ~4.25 - 6.25kb. 
 
 ### Image
 
-
+![alt text](<../screenshots/Screenshot 2026-10-03 at 6.12.50 PM.png>)
 
 
 Sample 5's sequence is interesting since there appears to be a combination of reads with increased copy number and expression in red and green, respectively across 4.25 - 6.75 kb. Despite this, there is a relatively even coverage compared to samples 2 and 3. Additionally, there are still SNPs sprinkled across the genome, however, similar to Sample 4, the degree of SNPs here are not as intense as in Samples 2 and 3.
