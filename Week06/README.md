@@ -30,7 +30,7 @@ Sample 3's genome sequence appears to have higher expression across various read
 
 ![alt text](<../screenshots/Screenshot 2026-10-03 at 6.21.55 PM.png>)
 
-This genome appears to have a lot of RNAi's between the ranges of ~4.25 - 6.25kb. The coverage of this sample is also quite fair across its genome. Sample 4 also has its fair share of SNPs across different reads with no correlation between reads, but to a lesser degree than in Samples 2 and 3. None the less, depending on the experimental goal, this could be sufficient for the researchers that sent this off for sequencing.
+This genome appears to have a lot of RNAi's (teal) between the ranges of ~4.25 - 6.25kb. The coverage of this sample is also quite fair across its genome. Sample 4 also has its fair share of SNPs across different reads with no correlation between reads, but to a lesser degree than in Samples 2 and 3. The teal and blue bands are facing toward each other, which is the typicaly direction for Illumina paired-end sequencing None the less, depending on the experimental goal, this could be sufficient for the researchers that sent this off for sequencing.
 
 
 ## Sample 5
@@ -40,4 +40,9 @@ This genome appears to have a lot of RNAi's between the ranges of ~4.25 - 6.25kb
 ![alt text](<../screenshots/Screenshot 2026-10-03 at 6.12.50 PM.png>)
 
 
-Sample 5's sequence is interesting since there appears to be a combination of reads with increased copy number and expression in red and green, respectively across ~4.25 - 6.75 kb. Notably, the increased copy number regions are flanked by the increased expression regions. Despite this, there is a relatively even coverage compared to samples 2 and 3. Additionally, there are still SNPs sprinkled across the genome, however, similar to Sample 4, the degree of SNPs here are not as intense as in Samples 2 and 3. Linke Sample 4, depending on the aim of the experiment, this may be sufficient for the scientists.
+Sample 5's sequence is interesting since there appears to be a combination of reads with increased copy number and expression in red and green, respectively across ~4.25 - 6.75 kb. Notably, the increased copy number regions are flanked by the increased expression regions. Despite this, there is a relatively even coverage compared to samples 2 and 3. some of the reads show the red and green bands are facing away from each other, which might show some structural varation from the reference genome. Additionally, there are still SNPs sprinkled across the genome, however, similar to Sample 4, the degree of SNPs here are not as intense as in Samples 2 and 3. Linke Sample 4, depending on the aim of the experiment, this may be sufficient for the scientists.
+
+
+## Color Legend
+
+![alt text](<../screenshots/Screenshot 2026-10-03 at 8.59.18 PM.png>)
