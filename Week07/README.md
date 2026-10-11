@@ -92,7 +92,7 @@ Output:
 ```bash
 [mpileup] 1 samples in 1 input files
 NZ_CADHBV010000001.1	60	A	29	............,,...............	1CG9B2GGGGC9GGGGGGEFG`GGGGG<B
-NZ_CADHBV010000001.1	61	G	33	,.............,,...............^].^].	BCEFGF<AGGFGEDGGGGG<GGG]GF<GGC<CC
+NZ_CADHBV010000001.1	61	G	33	,.............,,...............^].^	BCEFGF<AGGFGEDGGGGG<GGG]GF<GGC<CC
 NZ_CADHBV010000001.1	62	C	33	.............,,..................	88FGF@>GFFGA9GGGGGEGCGGPGFFGGC9CC
 NZ_CADHBV010000001.1	63	A	33	,.............,,.................	F;CGEE9BFCGGFCGGGGGGEGGXGEFGGGCCC
 NZ_CADHBV010000001.1	64	T	33	,............,,..................	A;/GE=01GDGFFECGGGAGFGGNGGFGGGFCC
