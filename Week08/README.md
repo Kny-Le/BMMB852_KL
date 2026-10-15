@@ -54,31 +54,39 @@ Miraculously, there were no variants detected in these patient stool samples inf
 
 Contig 1:
 
-![alt text](<Screenshot 2026-10-15 at 12.03.52 PM.png>)
+![IGV view of contig 1](screenshots/Screenshot%202026-10-15%20at%2012.03.52%E2%80%AFPM.png)
 
 Contig 20:
 
-![alt text](<Screenshot 2026-10-15 at 12.07.40 PM.png>)
+![IGV view of contig 20](screenshots/Screenshot%202026-10-15%20at%2012.07.40%E2%80%AFPM.png)
 
 Contig 40:
 
-![alt text](<Screenshot 2026-10-15 at 12.09.16 PM.png>)
+![IGV view of contig 40](screenshots/Screenshot%202026-10-15%20at%2012.09.16%E2%80%AFPM.png)
 
 You get the idea, there was very little variation between patient samples. However on contig 31:
 
-![alt text](<Screenshot 2026-10-15 at 12.10.50 PM.png>)
+![IGV view of contig 31](screenshots/Screenshot%202026-10-15%20at%2012.10.50%E2%80%AFPM.png)
 
 Sample 1:
 
-![alt text](<Screenshot 2026-10-15 at 12.43.37 PM.png>)
+![IGV view of sample 1](screenshots/Screenshot%202026-10-15%20at%2012.43.37%E2%80%AFPM.png)
 
 Sample 2:
 
-![alt text](<Screenshot 2026-10-15 at 12.42.57 PM.png>)
+![IGV view of sample 2](screenshots/Screenshot%202026-10-15%20at%2012.42.57%E2%80%AFPM.png)
 
 Sample 3:
 
-![alt text](<Screenshot 2026-10-15 at 12.41.31 PM.png>)
+![IGV view of sample 3](screenshots/Screenshot%202026-10-15%20at%2012.41.31%E2%80%AFPM.png)
+
+Additional IGV views:
+
+![Additional IGV view 1](screenshots/Screenshot%202026-10-15%20at%2012.15.58%E2%80%AFPM.png)
+
+![Additional IGV view 2](screenshots/Screenshot%202026-10-15%20at%2012.17.03%E2%80%AFPM.png)
+
+![Additional IGV view 3](screenshots/Screenshot%202026-10-15%20at%2012.17.49%E2%80%AFPM.png)
 
 ## Interpretation
 
@@ -103,7 +111,7 @@ open snpEff_summary.html
 
 Output in snpeff_data.txt folder:
 
-![alt text](<Screenshot 2026-10-15 at 1.27.15 PM.png>)
+![SnpEff summary screenshot](screenshots/Screenshot%202026-10-15%20at%201.27.15%E2%80%AFPM.png)
 
 
 These variants mapped to J7I61_RS07895, the 16s ribosomal RNA (16S rRNA) gene, which is a stretch of DNA in the H. pylori genome. Bacteria use this to make 16s rRNA as a structural component of the small subunit of bacterial ribosomes, which make proteins. According to the snpeff summary, there are 51 SNPS.
