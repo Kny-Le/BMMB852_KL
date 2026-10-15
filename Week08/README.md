@@ -80,14 +80,6 @@ Sample 3:
 
 ![IGV view of sample 3](screenshots/Screenshot%202026-10-15%20at%2012.41.31%E2%80%AFPM.png)
 
-Additional IGV views:
-
-![Additional IGV view 1](screenshots/Screenshot%202026-10-15%20at%2012.15.58%E2%80%AFPM.png)
-
-![Additional IGV view 2](screenshots/Screenshot%202026-10-15%20at%2012.17.03%E2%80%AFPM.png)
-
-![Additional IGV view 3](screenshots/Screenshot%202026-10-15%20at%2012.17.49%E2%80%AFPM.png)
-
 ## Interpretation
 
 Using SnpEff, first go to working folder and paste this into your terminal:
