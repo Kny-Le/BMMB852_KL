@@ -116,7 +116,7 @@ Base quality: D:ED4EDEE@?4EEE;EBEESEEADEEBEE
 
 The VCF file tells us that a variant has been called at position 67 and the BAM pileup shows us that the varient exists in the alignment. In the image below, we can see that this variant that has been called can be visualized in IGV. From this analysis it can be concluded that, at least one of the alignments and variant callings appear to be in agreement with each other. Additionally, the variants shown do not have lower read depth, leading me to believe that the variants can largely be trusted and not likely to be errors.
 
-![alt text](<Screenshot 2026-10-11 at 2.17.01 AM.png>)
+![IGV view of variant at position 67](screenshots/igv_variant_pos67.png)
 
 ## IGV
 
@@ -124,8 +124,8 @@ The alignment on IGV appears to be fairly consistent with what appears in the st
 
 coordinates: NZ_CADHBV010000001.1:16,139-24,250
 
-![alt text](<Screenshot 2026-10-11 at 1.56.40 AM.png>)
+![IGV alignment at 16,139-24,250](screenshots/igv_coords_16139-24250.png)
 
 Coordinates: NZ_CADHBV010000001.1:48,602-49,108
 
-![alt text](<Screenshot 2026-10-11 at 1.14.39 AM.png>)
+![IGV alignment at 48,602-49,108](screenshots/igv_coords_48602-49108.png)
