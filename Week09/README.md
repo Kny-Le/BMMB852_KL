@@ -1,5 +1,9 @@
 # Assignment 9
 
+## Organism
+
+This is Helicobacter pylori. This is a pathogenic bacterium that causes stomach ulcers. It is able to survive in the stomach acidic environment by secreting ammonia to neutralize the area around itself.
+
 ## CPU Count
 
 run command:
@@ -13,6 +17,8 @@ Output:
 ```bash
 10
 ```
+
+I will do 8 samples just to be safe
 
 ## Make files
 
