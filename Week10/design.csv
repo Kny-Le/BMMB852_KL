@@ -1,0 +1,13 @@
+sample,name,group
+SRR3955466,input_A,input
+SRR3955467,input_B,input
+SRR3955468,HP1043-IP_A,HP1043
+SRR3955469,HP1043-IP_B,HP1043
+SRR6351953,HSPR_wt_A,HSPR
+SRR6351952,HSPR_wt_B,HSPR
+SRR25905507,Fur_wt_dipyridyl_A,Fur_dipyridyl
+SRR25905506,Fur_wt_dipyridyl_B,Fur_dipyridyl
+SRR25905511,Fur_wt_iron_A,Fur_iron
+SRR25905510,Fur_wt_iron_B,Fur_iron
+SRR3401659,NikR_wt_ni-_A,NikR_untreated
+SRR3401754,NikR_wt_ni-_B,NikR_untreated
