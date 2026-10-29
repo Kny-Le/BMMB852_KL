@@ -99,4 +99,4 @@ Disagreement:
 
 Peak_915 spanning roughly 1,139,850 thru 1,140,020 is only visible in A, but not B
 
-![alt text](<Screenshot 2026-10-29 at 2.46.46 PM.png>)
+![IGV view of HP1043 replicates](../screenshots/Week10_HP1043_replicates_IGV.png)
