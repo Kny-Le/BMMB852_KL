@@ -35,21 +35,39 @@ copy and paste contents from the design.csv and makefile from this directory
 Before running, ensure that MACS3 is installed
 
 ```bash
-micromamba install -n bioinfo -c bioconda macs3
+micromamba install -n "$ENV_NAME" -c bioconda macs3 bedtools
 ```
 
-run:
+then run:
 
 ```bash
-make all
+micromamba run -n "$ENV_NAME" make all \
+	BACKGROUND_GROUP="$BACKGROUND_GROUP" \
+	REF_ACC="$REF_ACC" \
+	GSIZE="$GSIZE" \
+	EXTSIZE="$EXTSIZE" \
+	THREADS="$THREADS"
 ```
 
 ## How many peaks were called in each sample?
 
-Run:
-
 ```bash
-cd /Users/kenny/BMMB852/Week10 && for s in SRR3955468 SRR3955469 SRR6351953 SRR6351952 SRR25905507 SRR25905506 SRR25905511 SRR25905510 SRR3401659 SRR3401754; do ~/micromamba/envs/bioinfo/bin/macs3 callpeak -f BAM -g 1.65e6 --nomodel --extsize 147 -n $s --outdir peaks -t bam/$s.bam -c bam/SRR3955466.bam bam/SRR3955467.bam > /dev/null 2>&1; echo "$s $(wc -l < peaks/${s}_peaks.narrowPeak)"; done
+set -euo pipefail
+: "${BACKGROUND_GROUP:?Set BACKGROUND_GROUP to the control group in design.csv}"
+
+DESIGN=${DESIGN:-design.csv}
+PEAK_DIR=${PEAK_DIR:-peaks}
+printf '%-16s %s\n' SAMPLE PEAKS
+
+awk -F, -v background="$BACKGROUND_GROUP" 'NR > 1 && $3 != background { print $1 }' "$DESIGN" |
+while IFS= read -r sample; do
+	peak_file="$PEAK_DIR/${sample}_peaks.narrowPeak"
+	if [[ -f "$peak_file" ]]; then
+		printf '%-16s %s\n' "$sample" "$(wc -l < "$peak_file" | tr -d ' ')"
+	else
+		printf '%-16s %s\n' "$sample" MISSING
+	fi
+done
 ```
 
 output
@@ -69,10 +87,32 @@ SRR3401754      994
 
 ## How consistent are the peak calls within replicates?
 
-Run:
+This compares the two samples listed for each non-background group in `design.csv`. Set `BACKGROUND_GROUP` as above; `BEDTOOLS`, `DESIGN`, and `PEAK_DIR` can be overridden if needed. Each analyzed group should have exactly two samples.
 
 ```bash
-cd /Users/kenny/BMMB852/Week10 && B=~/micromamba/envs/bioinfo/bin/bedtools && for p in "SRR3955468 SRR3955469" "SRR6351953 SRR6351952" "SRR25905507 SRR25905506" "SRR25905511 SRR25905510" "SRR3401659 SRR3401754"; do set -- $p; a=peaks/$1_peaks.narrowPeak; b=peaks/$2_peaks.narrowPeak; na=$(wc -l < $a | tr -d ' '); nb=$(wc -l < $b | tr -d ' '); sh=$($B intersect -a $a -b $b -u | wc -l | tr -d ' '); echo "$1 vs $2: A=$na B=$nb shared=$sh ($((100*sh/na))% of A, $((100*sh/nb))% of B)"; done
+set -euo pipefail
+: "${BACKGROUND_GROUP:?Set BACKGROUND_GROUP to the control group in design.csv}"
+
+DESIGN=${DESIGN:-design.csv}
+PEAK_DIR=${PEAK_DIR:-peaks}
+BEDTOOLS=${BEDTOOLS:-bedtools}
+
+awk -F, -v background="$BACKGROUND_GROUP" '
+  NR > 1 && $3 != background {
+    if (!($3 in first)) first[$3] = $1
+    else print $3, first[$3], $1
+  }
+' "$DESIGN" |
+while read -r group sample_a sample_b; do
+	a="$PEAK_DIR/${sample_a}_peaks.narrowPeak"
+	b="$PEAK_DIR/${sample_b}_peaks.narrowPeak"
+	na=$(wc -l < "$a" | tr -d ' ')
+	nb=$(wc -l < "$b" | tr -d ' ')
+	shared=$("$BEDTOOLS" intersect -a "$a" -b "$b" -u | wc -l | tr -d ' ')
+	printf '%s vs %s: A=%s B=%s shared=%s (%s%% of A, %s%% of B)\n' \
+		"$sample_a" "$sample_b" "$na" "$nb" "$shared" \
+		"$((100 * shared / na))" "$((100 * shared / nb))"
+done
 ```
 
 Output:
@@ -87,9 +127,7 @@ SRR3401659 vs SRR3401754: A=1435 B=994 shared=840 (58% of A, 84% of B)
 
 ### IGV
 
-Load genome:
-
-ref/CP001173.1.fa
+Load the configured reference genome:
 
 Agreement:
 

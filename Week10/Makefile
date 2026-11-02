@@ -1,33 +1,29 @@
-# ChIP-seq pipeline for H. pylori G27 HP1043 (BioProjects PRJNA327549, PRJNA421261, PRJNA313048).
-# Groups in design.csv: "input" (background) plus 4 IP conditions, 2 replicates each.
+# ChIP-seq pipeline driven by the sample groups in design.csv.
+# The design contains one background group and multiple IP conditions.
 # All runs are single-end Illumina reads.
 #
 #   make background            fastq -> bam for the background samples
 #   make peaks                 call peaks for CONDITION vs the background
-#   make peaks CONDITION=HP1043
+#   make peaks CONDITION=<group>
 #   make all                   peaks for every non-background group
 
-SHELL := /bin/zsh
 .ONESHELL:
-.SHELLFLAGS := -eu -o pipefail -c
+.SHELLFLAGS := -eu -c
 
-# Tools from the bioinfo micromamba environment.
-# macs3 must be installed there: micromamba install -n bioinfo -c bioconda macs3
-ENV         := $(HOME)/micromamba/envs/bioinfo/bin
-EFETCH      := $(ENV)/efetch
-BWA         := $(ENV)/bwa
-SAMTOOLS    := $(ENV)/samtools
-FASTERQDUMP := $(ENV)/fasterq-dump
-MACS3       := $(ENV)/macs3
+# Tools must be available on PATH, or overridden with make variables.
+EFETCH      ?= efetch
+BWA         ?= bwa
+SAMTOOLS    ?= samtools
+FASTERQDUMP ?= fasterq-dump
+MACS3       ?= macs3
 
 # ---- Configuration -------------------------------------------------------
 
-BPRP   := PRJNA327549 PRJNA421261 PRJNA313048
-DESIGN := design.csv
+DESIGN ?= design.csv
 
-# Group name of the background (input) samples and the condition to analyze.
-BACKGROUND_GROUP := input
-CONDITION        ?= HP1043
+# Group name of the background samples and the condition to analyze.
+BACKGROUND_GROUP ?=
+CONDITION        ?= $(firstword $(CONDITIONS))
 
 # Run accessions per group, parsed from the design file (columns: sample,name,group).
 SAMPLES    := $(shell tail -n +2 $(DESIGN) | cut -d, -f1)
@@ -35,19 +31,21 @@ BG_SAMPLES := $(shell tail -n +2 $(DESIGN) | awk -F, '$$3=="$(BACKGROUND_GROUP)"
 CONDITIONS := $(shell tail -n +2 $(DESIGN) | cut -d, -f3 | sort -u | grep -vx '$(BACKGROUND_GROUP)')
 IP_SAMPLES := $(shell tail -n +2 $(DESIGN) | awk -F, '$$3=="$(CONDITION)" {print $$1}')
 
-# Reference genome: Helicobacter pylori G27.
-REF_ACC := CP001173.1
-REF     := ref/$(REF_ACC).fa
+# Supply the reference accession and MACS effective genome size when invoking make.
+REF_ACC ?=
+REF_DIR ?= ref
+REF     := $(REF_DIR)/$(if $(strip $(REF_ACC)),$(REF_ACC),REFERENCE).fa
 
-# Approximate genome size for MACS (~1.65 Mb).
-GSIZE := 1.65e6
+# Required by MACS; no organism-specific value is assumed here.
+GSIZE ?=
 
-FASTQ_DIR := fastq
-BAM_DIR   := bam
-PEAK_DIR  := peaks
+FASTQ_DIR ?= fastq
+BAM_DIR   ?= bam
+PEAK_DIR  ?= peaks
 
-THREADS := 4
-JOBS    ?= 4
+THREADS ?=
+JOBS    ?=
+EXTSIZE ?=
 
 .SECONDARY:
 
@@ -59,6 +57,7 @@ all:
 
 # Run everything with $(JOBS) samples in parallel.
 batch:
+	@test -n "$(JOBS)" || { echo "Set JOBS to the number of parallel make jobs"; exit 1; }
 	@echo "Running $(words $(SAMPLES)) samples from $(DESIGN) with $(JOBS) parallel jobs"
 	$(MAKE) -j$(JOBS) all
 
@@ -66,7 +65,8 @@ batch:
 ref: $(REF)
 
 $(REF):
-	mkdir -p ref
+	@test -n "$(REF_ACC)" || { echo "Set REF_ACC, e.g. make ref REF_ACC=<accession>"; exit 1; }
+	mkdir -p $(REF_DIR)
 	$(EFETCH) -db nuccore -id $(REF_ACC) -format fasta > $(REF)
 	$(BWA) index $(REF)
 	$(SAMTOOLS) faidx $(REF)
@@ -75,6 +75,7 @@ $(REF):
 fastq: $(addprefix $(FASTQ_DIR)/,$(addsuffix .fastq.gz,$(SAMPLES)))
 
 $(FASTQ_DIR)/%.fastq.gz:
+	@test -n "$(THREADS)" || { echo "Set THREADS for fasterq-dump"; exit 1; }
 	mkdir -p $(FASTQ_DIR)
 	$(FASTERQDUMP) --threads $(THREADS) -O $(FASTQ_DIR) $*
 	gzip -f $(FASTQ_DIR)/$*.fastq
@@ -83,6 +84,7 @@ $(FASTQ_DIR)/%.fastq.gz:
 align: $(addprefix $(BAM_DIR)/,$(addsuffix .bam.bai,$(SAMPLES)))
 
 $(BAM_DIR)/%.bam: $(REF) $(FASTQ_DIR)/%.fastq.gz
+	@test -n "$(THREADS)" || { echo "Set THREADS for BWA and samtools"; exit 1; }
 	mkdir -p $(BAM_DIR)
 	$(BWA) mem -t $(THREADS) $(REF) $(FASTQ_DIR)/$*.fastq.gz \
 	| $(SAMTOOLS) view -b -F 4 - \
@@ -91,7 +93,7 @@ $(BAM_DIR)/%.bam: $(REF) $(FASTQ_DIR)/%.fastq.gz
 $(BAM_DIR)/%.bam.bai: $(BAM_DIR)/%.bam
 	$(SAMTOOLS) index $<
 
-# ---- Background workflow: download, align, index the input samples --------
+# ---- Background workflow: download, align, and index control samples ------
 background: $(addprefix $(BAM_DIR)/,$(addsuffix .bam.bai,$(BG_SAMPLES)))
 	@echo "Background samples ready: $(BG_SAMPLES)"
 
@@ -101,9 +103,13 @@ PEAKS := $(PEAK_DIR)/$(CONDITION)_peaks.narrowPeak
 peaks: $(PEAKS)
 
 $(PEAKS): $(addprefix $(BAM_DIR)/,$(addsuffix .bam.bai,$(IP_SAMPLES) $(BG_SAMPLES)))
+	@test -n "$(BACKGROUND_GROUP)" || { echo "Set BACKGROUND_GROUP to the control group in $(DESIGN)"; exit 1; }
+	@test -n "$(BG_SAMPLES)" || { echo "No samples in background group $(BACKGROUND_GROUP)"; exit 1; }
 	@test -n "$(IP_SAMPLES)" || { echo "No samples in group $(CONDITION)"; exit 1; }
+	@test -n "$(GSIZE)" || { echo "Set GSIZE to the effective genome size for MACS3"; exit 1; }
+	@test -n "$(EXTSIZE)" || { echo "Set EXTSIZE for MACS3"; exit 1; }
 	mkdir -p $(PEAK_DIR)
-	$(MACS3) callpeak -f BAM -g $(GSIZE) --nomodel --extsize 147 -n $(CONDITION) --outdir $(PEAK_DIR) \
+	$(MACS3) callpeak -f BAM -g $(GSIZE) --nomodel --extsize $(EXTSIZE) -n $(CONDITION) --outdir $(PEAK_DIR) \
 	  -t $(addprefix $(BAM_DIR)/,$(addsuffix .bam,$(IP_SAMPLES))) \
 	  -c $(addprefix $(BAM_DIR)/,$(addsuffix .bam,$(BG_SAMPLES)))
 	@echo "Peaks: $(PEAKS) ($$(wc -l < $(PEAKS)) peaks)"
