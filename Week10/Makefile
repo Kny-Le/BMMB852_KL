@@ -16,13 +16,14 @@ BWA         ?= bwa
 SAMTOOLS    ?= samtools
 FASTERQDUMP ?= fasterq-dump
 MACS3       ?= macs3
+MICROMAMBA  ?= micromamba
 
 # ---- Configuration -------------------------------------------------------
 
 DESIGN ?= design.csv
 
-# Group name of the background samples and the condition to analyze.
-BACKGROUND_GROUP ?=
+# Dataset configuration. Edit these values for a different experiment.
+BACKGROUND_GROUP ?= input
 CONDITION        ?= $(firstword $(CONDITIONS))
 
 # Run accessions per group, parsed from the design file (columns: sample,name,group).
@@ -31,25 +32,30 @@ BG_SAMPLES := $(shell tail -n +2 $(DESIGN) | awk -F, '$$3=="$(BACKGROUND_GROUP)"
 CONDITIONS := $(shell tail -n +2 $(DESIGN) | cut -d, -f3 | sort -u | grep -vx '$(BACKGROUND_GROUP)')
 IP_SAMPLES := $(shell tail -n +2 $(DESIGN) | awk -F, '$$3=="$(CONDITION)" {print $$1}')
 
-# Supply the reference accession and MACS effective genome size when invoking make.
-REF_ACC ?=
+# Reference and MACS settings for this dataset; override on the make command line if needed.
+REF_ACC ?= CP001173.1
 REF_DIR ?= ref
 REF     := $(REF_DIR)/$(if $(strip $(REF_ACC)),$(REF_ACC),REFERENCE).fa
 
-# Required by MACS; no organism-specific value is assumed here.
-GSIZE ?=
+# Effective genome size and extension size used by MACS.
+GSIZE ?= 1.65e6
+EXTSIZE ?= 147
 
 FASTQ_DIR ?= fastq
 BAM_DIR   ?= bam
 PEAK_DIR  ?= peaks
 
-THREADS ?=
+THREADS ?= 4
 JOBS    ?=
-EXTSIZE ?=
 
 .SECONDARY:
 
-.PHONY: all batch fastq ref align background peaks clean list
+.PHONY: all batch fastq ref align background peaks install-tools clean list
+
+# Install optional analysis tools into the currently activated environment.
+install-tools:
+	@test -n "$$CONDA_PREFIX" || { echo "Activate the target environment before installing tools"; exit 1; }
+	$(MICROMAMBA) install -p "$$CONDA_PREFIX" -c bioconda macs3 bedtools
 
 # Call peaks for every condition in the design file.
 all:

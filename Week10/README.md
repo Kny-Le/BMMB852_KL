@@ -32,41 +32,34 @@ touch Makefile
 
 copy and paste contents from the design.csv and makefile from this directory
 
-Before running, ensure that MACS3 is installed
 
 ```bash
-micromamba install -n "$ENV_NAME" -c bioconda macs3 bedtools
+make install-tools
 ```
 
-then run:
+Run the pipeline from this project directory:
 
 ```bash
-micromamba run -n "$ENV_NAME" make all \
-	BACKGROUND_GROUP="$BACKGROUND_GROUP" \
-	REF_ACC="$REF_ACC" \
-	GSIZE="$GSIZE" \
-	EXTSIZE="$EXTSIZE" \
-	THREADS="$THREADS"
+make all
 ```
 
 ## How many peaks were called in each sample?
 
 ```bash
-set -euo pipefail
-: "${BACKGROUND_GROUP:?Set BACKGROUND_GROUP to the control group in design.csv}"
+BACKGROUND_GROUP=input
+DESIGN=design.csv
+PEAK_DIR=peaks
 
-DESIGN=${DESIGN:-design.csv}
-PEAK_DIR=${PEAK_DIR:-peaks}
 printf '%-16s %s\n' SAMPLE PEAKS
-
-awk -F, -v background="$BACKGROUND_GROUP" 'NR > 1 && $3 != background { print $1 }' "$DESIGN" |
+awk -F, -v bg="$BACKGROUND_GROUP" 'NR > 1 && $3 != bg { print $1 }' "$DESIGN" |
 while IFS= read -r sample; do
-	peak_file="$PEAK_DIR/${sample}_peaks.narrowPeak"
-	if [[ -f "$peak_file" ]]; then
-		printf '%-16s %s\n' "$sample" "$(wc -l < "$peak_file" | tr -d ' ')"
-	else
-		printf '%-16s %s\n' "$sample" MISSING
-	fi
+    peak_file="$PEAK_DIR/${sample}_peaks.narrowPeak"
+    if [ -f "$peak_file" ]; then
+        count=$(wc -l < "$peak_file" | tr -d ' ')
+        printf '%-16s %s\n' "$sample" "$count"
+    else
+        printf '%-16s %s\n' "$sample" MISSING
+    fi
 done
 ```
 
@@ -90,39 +83,25 @@ SRR3401754      994
 This compares the two samples listed for each non-background group in `design.csv`. Set `BACKGROUND_GROUP` as above; `BEDTOOLS`, `DESIGN`, and `PEAK_DIR` can be overridden if needed. Each analyzed group should have exactly two samples.
 
 ```bash
-set -euo pipefail
-: "${BACKGROUND_GROUP:?Set BACKGROUND_GROUP to the control group in design.csv}"
-
-DESIGN=${DESIGN:-design.csv}
-PEAK_DIR=${PEAK_DIR:-peaks}
-BEDTOOLS=${BEDTOOLS:-bedtools}
-
-awk -F, -v background="$BACKGROUND_GROUP" '
-  NR > 1 && $3 != background {
-    if (!($3 in first)) first[$3] = $1
-    else print $3, first[$3], $1
-  }
-' "$DESIGN" |
-while read -r group sample_a sample_b; do
-	a="$PEAK_DIR/${sample_a}_peaks.narrowPeak"
-	b="$PEAK_DIR/${sample_b}_peaks.narrowPeak"
-	na=$(wc -l < "$a" | tr -d ' ')
-	nb=$(wc -l < "$b" | tr -d ' ')
-	shared=$("$BEDTOOLS" intersect -a "$a" -b "$b" -u | wc -l | tr -d ' ')
-	printf '%s vs %s: A=%s B=%s shared=%s (%s%% of A, %s%% of B)\n' \
-		"$sample_a" "$sample_b" "$na" "$nb" "$shared" \
-		"$((100 * shared / na))" "$((100 * shared / nb))"
+BACKGROUND_GROUP=input
+awk -F, -v bg="$BACKGROUND_GROUP" 'NR>1 && $3!=bg {if (!($3 in first)) first[$3]=$1; else print first[$3],$1}' design.csv |
+while read -r a b; do
+  fa="peaks/${a}_peaks.narrowPeak"; fb="peaks/${b}_peaks.narrowPeak"
+  na=$(wc -l < "$fa" | tr -d ' '); nb=$(wc -l < "$fb" | tr -d ' ')
+  sa=$(bedtools intersect -a "$fa" -b "$fb" -u | wc -l | tr -d ' ')
+  sb=$(bedtools intersect -a "$fb" -b "$fa" -u | wc -l | tr -d ' ')
+  printf '%s vs %s: %s%%, %s%% overlap\n' "$a" "$b" "$((100*sa/na))" "$((100*sb/nb))"
 done
 ```
 
 Output:
 
 ```bash
-SRR3955468 vs SRR3955469: A=1388 B=1311 shared=1052 (75% of A, 80% of B)
-SRR6351953 vs SRR6351952: A=577 B=1104 shared=395 (68% of A, 35% of B)
-SRR25905507 vs SRR25905506: A=1410 B=1403 shared=1303 (92% of A, 92% of B)
-SRR25905511 vs SRR25905510: A=1387 B=1274 shared=1187 (85% of A, 93% of B)
-SRR3401659 vs SRR3401754: A=1435 B=994 shared=840 (58% of A, 84% of B)
+SRR3955468 vs SRR3955469: 75%, 86% overlap
+SRR6351953 vs SRR6351952: 68%, 44% overlap
+SRR25905507 vs SRR25905506: 92%, 86% overlap
+SRR25905511 vs SRR25905510: 85%, 93% overlap
+SRR3401659 vs SRR3401754: 58%, 82% overlap
 ```
 
 ### IGV
