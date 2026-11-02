@@ -9,15 +9,14 @@ SHELL := /bin/zsh
 .ONESHELL:
 .SHELLFLAGS := -eu -o pipefail -c
 
-# Tools from the bioinfo micromamba environment (absolute paths are robust
-# against PATH clobbering in .ONESHELL recipes).
-ENV         := $(HOME)/micromamba/envs/bioinfo/bin
-BIO         := $(ENV)/bio
-EFETCH      := $(ENV)/efetch
-BWA         := $(ENV)/bwa
-SAMTOOLS    := $(ENV)/samtools
-BCFTOOLS    := $(ENV)/bcftools
-FASTERQDUMP := $(ENV)/fasterq-dump
+# Tool commands are resolved through PATH. Override any command as needed,
+# for example: make BWA=/custom/location/bwa
+BIO         ?= bio
+EFETCH      ?= efetch
+BWA         ?= bwa
+SAMTOOLS    ?= samtools
+BCFTOOLS    ?= bcftools
+FASTERQDUMP ?= fasterq-dump
 
 # ---- Configuration -------------------------------------------------------
 
