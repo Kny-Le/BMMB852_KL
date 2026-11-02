@@ -4,13 +4,9 @@
 # Aligning them against a single reference (H. pylori 26695) will only
 # capture the small fraction of reads originating from that genome.
 # Treat the resulting VCF as exploratory.
+# For repeatable runs, use the checked-in design.csv. The `design` target
+# refreshes it from live NCBI metadata and may change the sample list.
 
-SHELL := /bin/zsh
-.ONESHELL:
-.SHELLFLAGS := -eu -o pipefail -c
-
-# Tool commands are resolved through PATH. Override any command as needed,
-# for example: make BWA=/custom/location/bwa
 BIO         ?= bio
 EFETCH      ?= efetch
 BWA         ?= bwa
@@ -52,7 +48,7 @@ THREADS := 4
 # Override on the command line: make batch JOBS=8
 JOBS ?= 4
 
-.PHONY: all batch design fastq ref align call merge clean
+.PHONY: all batch design fastq ref align call merge clean list
 
 all: merge
 
@@ -125,7 +121,7 @@ $(MERGED): $(VCFS)
 
 # ---- Housekeeping --------------------------------------------------------
 clean:
-	rm -rf $(FASTQ_DIR) $(BAM_DIR) $(VCF_DIR) results
+	rm -rf $(FASTQ_DIR) $(BAM_DIR) $(VCF_DIR) ref results
 
 # Print sample list (debug).
 list:
