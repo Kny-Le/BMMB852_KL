@@ -32,11 +32,6 @@ touch Makefile
 
 copy and paste contents from the design.csv and makefile from this directory
 
-
-```bash
-make install-tools
-```
-
 Run the pipeline from this project directory:
 
 ```bash
