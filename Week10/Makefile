@@ -10,13 +10,7 @@
 .ONESHELL:
 .SHELLFLAGS := -eu -c
 
-# Tools must be available on PATH, or overridden with make variables.
-EFETCH      ?= efetch
-BWA         ?= bwa
-SAMTOOLS    ?= samtools
-FASTERQDUMP ?= fasterq-dump
-MACS3       ?= macs3
-MICROMAMBA  ?= micromamba
+# Required tools must be available on PATH.
 
 # ---- Configuration -------------------------------------------------------
 
@@ -55,7 +49,7 @@ JOBS    ?=
 # Install optional analysis tools into the currently activated environment.
 install-tools:
 	@test -n "$$CONDA_PREFIX" || { echo "Activate the target environment before installing tools"; exit 1; }
-	$(MICROMAMBA) install -p "$$CONDA_PREFIX" -c bioconda macs3 bedtools
+	micromamba install -p "$$CONDA_PREFIX" -c bioconda macs3 bedtools
 
 # Call peaks for every condition in the design file.
 all:
@@ -73,9 +67,9 @@ ref: $(REF)
 $(REF):
 	@test -n "$(REF_ACC)" || { echo "Set REF_ACC, e.g. make ref REF_ACC=<accession>"; exit 1; }
 	mkdir -p $(REF_DIR)
-	$(EFETCH) -db nuccore -id $(REF_ACC) -format fasta > $(REF)
-	$(BWA) index $(REF)
-	$(SAMTOOLS) faidx $(REF)
+	efetch -db nuccore -id $(REF_ACC) -format fasta > $(REF)
+	bwa index $(REF)
+	samtools faidx $(REF)
 
 # ---- Download FASTQ (single-end) -----------------------------------------
 fastq: $(addprefix $(FASTQ_DIR)/,$(addsuffix .fastq.gz,$(SAMPLES)))
@@ -83,7 +77,7 @@ fastq: $(addprefix $(FASTQ_DIR)/,$(addsuffix .fastq.gz,$(SAMPLES)))
 $(FASTQ_DIR)/%.fastq.gz:
 	@test -n "$(THREADS)" || { echo "Set THREADS for fasterq-dump"; exit 1; }
 	mkdir -p $(FASTQ_DIR)
-	$(FASTERQDUMP) --threads $(THREADS) -O $(FASTQ_DIR) $*
+	fasterq-dump --threads $(THREADS) -O $(FASTQ_DIR) $*
 	gzip -f $(FASTQ_DIR)/$*.fastq
 
 # ---- Alignment -----------------------------------------------------------
@@ -92,12 +86,12 @@ align: $(addprefix $(BAM_DIR)/,$(addsuffix .bam.bai,$(SAMPLES)))
 $(BAM_DIR)/%.bam: $(REF) $(FASTQ_DIR)/%.fastq.gz
 	@test -n "$(THREADS)" || { echo "Set THREADS for BWA and samtools"; exit 1; }
 	mkdir -p $(BAM_DIR)
-	$(BWA) mem -t $(THREADS) $(REF) $(FASTQ_DIR)/$*.fastq.gz \
-	| $(SAMTOOLS) view -b -F 4 - \
-	| $(SAMTOOLS) sort -@ $(THREADS) -o $(BAM_DIR)/$*.bam -
+	bwa mem -t $(THREADS) $(REF) $(FASTQ_DIR)/$*.fastq.gz \
+	| samtools view -b -F 4 - \
+	| samtools sort -@ $(THREADS) -o $(BAM_DIR)/$*.bam -
 
 $(BAM_DIR)/%.bam.bai: $(BAM_DIR)/%.bam
-	$(SAMTOOLS) index $<
+	samtools index $<
 
 # ---- Background workflow: download, align, and index control samples ------
 background: $(addprefix $(BAM_DIR)/,$(addsuffix .bam.bai,$(BG_SAMPLES)))
@@ -115,7 +109,7 @@ $(PEAKS): $(addprefix $(BAM_DIR)/,$(addsuffix .bam.bai,$(IP_SAMPLES) $(BG_SAMPLE
 	@test -n "$(GSIZE)" || { echo "Set GSIZE to the effective genome size for MACS3"; exit 1; }
 	@test -n "$(EXTSIZE)" || { echo "Set EXTSIZE for MACS3"; exit 1; }
 	mkdir -p $(PEAK_DIR)
-	$(MACS3) callpeak -f BAM -g $(GSIZE) --nomodel --extsize $(EXTSIZE) -n $(CONDITION) --outdir $(PEAK_DIR) \
+	macs3 callpeak -f BAM -g $(GSIZE) --nomodel --extsize $(EXTSIZE) -n $(CONDITION) --outdir $(PEAK_DIR) \
 	  -t $(addprefix $(BAM_DIR)/,$(addsuffix .bam,$(IP_SAMPLES))) \
 	  -c $(addprefix $(BAM_DIR)/,$(addsuffix .bam,$(BG_SAMPLES)))
 	@echo "Peaks: $(PEAKS) ($$(wc -l < $(PEAKS)) peaks)"
