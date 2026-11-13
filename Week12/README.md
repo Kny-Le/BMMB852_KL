@@ -69,3 +69,5 @@ Column 5: log2FC (UHR/HBR)
 ![Gene count summary showing RPL3](<screenshots/Screenshot 2026-11-12 at 1.06.19 PM.png>)
 
 ![Gene count summary showing YWHAH](<screenshots/Screenshot 2026-11-12 at 3.10.16 PM.png>)
+
+My experience working the the AI on this has been interesting since I have only used R to process data and make graphs from data points and/or RNA-seq. I have never used R to calculate counts of different genes for me before. What I have done in the past is just process the sequencing files separately and then in R organize and plot it.
